@@ -33,6 +33,7 @@ App({
       }
     })
   },
+  //获取全局变量
   globalData: {
     userInfo: null
   }
