@@ -1,3 +1,4 @@
+var _app = getApp()
 Page({
   data: { 
     menuitems: [
@@ -7,5 +8,7 @@ Page({
       { text: '我的消息', url: '../mynews/mynews', icon: '../../images/消息.png', tips: '' }, 
       { text: '我的购买', url: '../mypurchase/mypurchase', icon: '../../images/购买.png', tips: '' }
     ]
+  },
+  onLoad: function (options) { 
   }
 })

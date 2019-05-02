@@ -1,0 +1,27 @@
+.avatar-wrapper {
+  background:peachpuff;
+  padding: 25px 0;
+} 
+.avatar-wrapper .avatar {
+  margin: auto;
+  text-align: center;
+} 
+.avatar-wrapper .avatar image {
+  width: 100px;
+  height: 100px;
+} 
+.avatar-wrapper .text {
+  text-align: center;
+  color: #fff;
+} 
+.weui-cell__hd image {
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 30px;
+  height:80rpx;
+} 
+.weui-cell__hd text {
+  font-size: large;
+  letter-spacing:8px;
+  margin:10px;
+}
