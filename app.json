@@ -5,7 +5,12 @@
     "pages/logs/logs",
     "pages/praise/praise",
     "pages/test/test",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/mymember/mymember",
+    "pages/myassessment/myassessment",
+    "pages/mycollection/mycollection",
+    "pages/mynews/mynews",
+    "pages/mypurchase/mypurchase"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,9 +22,10 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "首页",
         "iconPath": "images/tabbar/home-off.png",
-        "selectedIconPath": "images/tabbar/home-on.png"
+        "selectedIconPath": "images/tabbar/home-on.png",
+        "text": "首页"
+
       },
       {
         "pagePath": "pages/praise/praise",
