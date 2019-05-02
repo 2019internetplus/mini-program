@@ -5,7 +5,12 @@
     "pages/home/home",
     "pages/praise/praise",
     "pages/test/test",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/mymember/mymember",
+    "pages/myassessment/myassessment",
+    "pages/mycollection/mycollection",
+    "pages/mynews/mynews",
+    "pages/mypurchase/mypurchase"
   ],
   "window": {
     "backgroundTextStyle": "light",
