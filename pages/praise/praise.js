@@ -1,5 +1,5 @@
 //index.js
-
+const app = getApp()
 Page({
 
   /**
@@ -7,16 +7,39 @@ Page({
    */
   data: {
     post: [
-      {Message:"123",
-        UpNum:"11",
-        CommentNum:"2",
-        CollectNum:"1"
+      {
+        nickname:"凉凉",
+        headimg: '../../images/lunBo/2.png',
+        message:"感动，一个星期没碰辣椒，还好我妈给我寄了剁辣椒"
       },
-      {Message:"123",
-        UpNum: "10",
-        CommentNum: "3",
-        CollectNum: "4"}
+      {
+        nickname: "咕咕咕",
+        headimg: '../../images/lunBo/3.png',
+        message:"我怎么这么厉害！"
+      },
+      {
+        nickname: "3",
+        headimg: '../../images/lunBo/2.png',
+        message: "123"
+      },
+      {
+        nickname: "4",
+        headimg: '../../images/lunBo/2.png',
+        message: "123"
+      }
     ],
+    liuyanlist: [
+      {
+        nickname: "真香",
+        headimg: '../../images/lunBo/1.png',
+        liuyantext:"夸一个！"
+      },
+      {
+        nickname: "110",
+        headimg: '../../images/lunBo/1.png',
+        liuyantext: "12148"
+      }
+    ]
   },
 
   /**
