@@ -1,0 +1,30 @@
+/**index.wxss**/
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-content:center;
+}
+
+.tool{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+}
+
+.tool-item{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30rpx;
+}
+
+.tool-item image{
+  height: 30rpx;
+  width: 30rpx;
+  vertical-align: -3px;
+  margin-right: 10rpx;
+}
+
+.comment image{
+  transform: scale(.95);
+}

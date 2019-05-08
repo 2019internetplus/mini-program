@@ -1,0 +1,29 @@
+<!-- praise.wxml -->
+<scroll-view
+    scroll-y="true"
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scroll"
+    scroll-into-view="{{toView}}"
+    scroll-top="{{scrollTop}}"
+  >
+    <block wx:for="{{post}}" wx:key="key" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+      <view>{{item.Message}}</view>
+      <view class="tool">
+        <view class="tool-item" catchtap='onUpTop'>
+          <image src="/images/zan1.png"></image>
+          <text>{{item.UpNum}}</text>
+        </view>
+
+        <view class="tool-item comment" catchtap='onCommentTap'>
+          <image src="/images/pinglun.png"></image>
+          <text>{{item.CommentNum}}</text>
+        </view>
+
+        <view class="tool-item" catchtap='onCollectionTap'>
+          <image src="/images/shoucang1.png"></image>
+          <text>{{item.CollectNum}}</text>
+        </view>
+      </view>
+    </block>
+</scroll-view>
