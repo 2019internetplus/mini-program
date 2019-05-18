@@ -3,8 +3,9 @@
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/praise/praise",
-    "pages/test/test",
+    "pages/home/test/test",
+    "pages/home/record/record",
+    "pages/calendar/calendar",
     "pages/mine/mine",
     "pages/mymember/mymember",
     "pages/myassessment/myassessment",
@@ -14,7 +15,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FAF0E6",
+    "navigationBarBackgroundColor": "#FFF",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
@@ -25,19 +26,13 @@
         "iconPath": "images/tabbar/home-off.png",
         "selectedIconPath": "images/tabbar/home-on.png",
         "text": "首页"
-
       },
+      
       {
-        "pagePath": "pages/praise/praise",
-        "text": "夸夸圈",
-        "iconPath": "images/tabbar/kuakua-off.png",
-        "selectedIconPath": "images/tabbar/kuakua-on.png"
-      },
-      {
-        "pagePath": "pages/test/test",
-        "text": "测评",
-        "iconPath": "images/tabbar/evaluation-off.png",
-        "selectedIconPath": "images/tabbar/evaluation-on.png"
+        "pagePath": "pages/calendar/calendar",
+        "text": "日历",
+        "iconPath": "images/tabbar/calendar-off.png",
+        "selectedIconPath": "images/tabbar/calendar-on.png"
       },
       {
         "pagePath": "pages/mine/mine",
@@ -46,10 +41,10 @@
         "selectedIconPath": "images/tabbar/my-on.png"
       }
     ],
-    "color": "#6e6d6b",
-    "selectedColor": "#e64340",
+    "color": "#bfbfbf",
+    "selectedColor": "#515151",
     "borderStyle": "white",
-    "backgroundColor": "#FAF0E6"
+    "backgroundColor": "#FFFFFF"
   },
   "sitemapLocation": "sitemap.json"
 }
