@@ -1,7 +1,7 @@
 <view class="mine">
   <view class="user">
     <view class="avatar">
-      <image style="border-radius:50%;" src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'../../images/default.png'}}"></image>
+      <image style="border-radius:50%;" src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'../../images/mine/default.png'}}"></image>
     </view>
     <view class="text">
       <text wx:if="{{userinfo.nickName}}">{{userinfo.nickName}}</text>

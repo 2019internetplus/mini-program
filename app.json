@@ -35,8 +35,8 @@
       {
         "text": "我的",
         "pagePath": "pages/mine/mine",
-        "iconPath": "images/tabbar/my-off.png",
-        "selectedIconPath": "images/tabbar/my-on.png"
+        "iconPath": "images/tabbar/mine-off.png",
+        "selectedIconPath": "images/tabbar/mine-on.png"
       }
     ],
     "color": "#bfbfbf",
