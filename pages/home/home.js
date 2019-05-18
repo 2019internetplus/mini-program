@@ -1,1 +1,5 @@
-Page({})
+var app = getApp();
+
+Page({
+ 
+})

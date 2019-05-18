@@ -1,0 +1,72 @@
+/**index.wxss**/
+
+.feed-item{
+  width: 95%;
+  padding: 30rpx 30rpx 20rpx;
+  margin: 7rpx 0 6rpx 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 2px 2px 500px#FAF0E6;
+}
+.feed-item .feed-source{
+  width:95%;
+  left: 0;
+  height: 50rpx;
+}
+.feed-item .feed-source .avatar{
+  position: relative;
+  display: inline-block;
+}
+.feed-item .feed-source a{
+  display: inline-block;
+  height: 40rpx;
+}
+.feed-item .feed-source .avatar image{
+  /*position: absolute;*/
+  display: inline-block;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 90rpx;
+  top: 10rpx;
+  vertical-align: middle;
+}
+.feed-item .feed-source text{
+  /*position: absolute;*/
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  margin: 0 0 0 15rpx;
+  color: #a0acac;
+  font-size: 30rpx;
+}
+.head-name{
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin: 5rpx auto;
+}
+
+.input-style{
+  width: 95%;
+  height: 30px;
+  border: 1px solid #FAF0E6;
+  margin: 5rpx auto;
+  font-size: 11pt;
+}
+
+.liuyanview{
+  width: 95%;
+  margin: 5rpx auto;
+}
+.button-style{
+  background-color: #FAF0E6;
+  position: fixed;
+  bottom: 30rpx;
+  width:90%;
+  left:5%;
+  color: #6e6d6b;
+  font-size: 80%;
+  border-bottom:#eee;
+}
