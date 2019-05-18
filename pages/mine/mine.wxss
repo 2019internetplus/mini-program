@@ -1,27 +1,40 @@
-.avatar-wrapper {
-  background:peachpuff;
-  padding: 25px 0;
+.user {
+  margin-top: 30rpx;
+  /* background: -webkit-linear-gradient(top,white,rgba(255, 166, 0, 0.11)); */
+  height:350rpx;
+  display: flex;
+  flex-flow: column;
 } 
-.avatar-wrapper .avatar {
-  margin: auto;
+.user .avatar {
+  margin: 50rpx auto 0 auto;
   text-align: center;
+}
+.user .avatar image {
+  width: 200rpx;
+  height: 200rpx;
 } 
-.avatar-wrapper .avatar image {
-  width: 100px;
-  height: 100px;
-} 
-.avatar-wrapper .text {
+.user .text {
   text-align: center;
-  color: #fff;
+  color:black;
 } 
-.weui-cell__hd image {
-  margin-right: 5px;
-  vertical-align: middle;
-  width: 30px;
-  height:80rpx;
-} 
-.weui-cell__hd text {
+.user .more {
+  position: fixed;
   font-size: large;
-  letter-spacing:8px;
-  margin:10px;
+  right: 30rpx;
+}
+.list {
+  margin: 50rpx;
+}
+.listitem{
+  border-bottom: solid 1px #e2e2e2;
+}
+.list image {
+  vertical-align: middle;
+  width: 50rpx;
+  height: 50rpx;
+  padding: 37.5rpx;
+} 
+.list text {
+  font-size: large;
+  color: #555555;
 }

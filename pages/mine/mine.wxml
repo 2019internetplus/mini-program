@@ -1,30 +1,24 @@
-<view class="mine-wrapper">
-  <view class="avatar-wrapper">
-    <view>
-      <view class="avatar">
-        <image style="border-radius:50%;" src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'../../images/default.png'}}"></image>
-      </view>
-      <view class="text">
-        <text wx:if="{{userinfo.nickName}}">{{userinfo.nickName}}</text>
-        <text wx:else bindtap="toLogin">注册 / 登录</text>
-      </view>
-      <view class="text">
-        <text wx:if="{{userSign==2}}">{{"XD"}}</text>
-        <text wx:elif="{{userSign==1}}">{{"用户"}}</text>
-      </view>
+<view class="mine">
+  <view class="user">
+    <view class="avatar">
+      <image style="border-radius:50%;" src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'../../images/default.png'}}"></image>
+    </view>
+    <view class="text">
+      <text wx:if="{{userinfo.nickName}}">{{userinfo.nickName}}</text>
+      <text wx:else bindtap="toLogin">登录</text>
+    </view>
+    <view class="more">
+      <navigator url="pages/more/more" wx:if="{{userSign==1}}">更多</navigator>
     </view>
   </view>
-  <view class="list-wrapper">
-    <view class="weui-cells weui-cells_after-title">
-      <block wx:for="{{menuitems}}" wx:key="menu_for">
-        <navigator url="{{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-          <view class="weui-cell__hd">
-            <image src="{{item.icon}}"></image>
-            <text>{{item.text}}</text>
-            <text>{{item.tips}}</text>
-          </view>
-        </navigator>
-      </block>
-    </view>
+  <view class="list">
+    <block wx:for="{{menuitems}}" wx:key="menu_for">
+      <navigator url="{{item.url}}">
+        <view class="listitem">
+          <image src="{{item.icon}}"></image>
+          <text>{{item.text}}</text>
+        </view>
+      </navigator>
+    </block>
   </view>
 </view>
