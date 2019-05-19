@@ -1,2 +1,24 @@
-<!--pages/home/test/test.wxml-->
-<text>pages/home/test/test.wxml</text>
+<view class="warp" style="background-image: url('/images/background.jpg')">
+  
+  <view bindtap='select'>
+    <progress percent="{{per}}" show-info/>
+  </view>
+  <view class='outer'>
+    <view class='describe'>{{index+1}}、{{title[list[index]]}}</view>
+    <view class='answer'>
+
+        <view class="item">
+            <text decode='{{true}}' class='text'>&nbsp;{{choice[list[index]][radios[0]]}}</text>
+          
+        </view>
+        <view class="item">
+            <text decode='{{true}}' class='text'>&nbsp;{{choice[list[index]][radios[1]]}}</text>
+         
+        </view>
+
+        <view class="item">
+            <text decode='{{true}}' class='text'>&nbsp;{{choice[list[index]][radios[2]]}}</text>
+        </view>
+    </view>
+  </view>
+</view>

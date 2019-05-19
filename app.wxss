@@ -8,3 +8,15 @@
   box-sizing: border-box;
   background-color: #FFF;
 } 
+
+
+page::before{
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2rpx;
+    background-color: #cdcdcd;
+    z-index: 9999;
+}
