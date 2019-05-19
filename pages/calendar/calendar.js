@@ -1,43 +1,13 @@
+
 // pages/myassessment/myassessment.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    showMonth: {},
-    data: {},
-    selectDateText: '',
-    pickerDateValue: '',
+    data: {}
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     let _this = this;
-    promiseHandle(wx.getSystemInfo).then((data) => {
-      _this.setData({
-        updatePanelTop: data.windowHeight
-      });
-    });
     changeDate.call(this);
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  },
-
-  datePickerChangeEvent(e) {
-    const date = new Date(Date.parse(e.detail.value));
-    changeDate.call(this, new Date(date.getFullYear(), date.getMonth(), 1));
-  },
-
-  changeDateEvent(e) {
-    const { year, month } = e.currentTarget.dataset;
-    changeDate.call(this, new Date(year, parseInt(month) - 1, 1));
   },
 
   dateClickEvent(e) {
@@ -54,19 +24,6 @@ Page({
     changeDate.call(this, new Date(year, parseInt(month) - 1, date));
   },
 
-
-  showUpdatePanelEvent() {
-    showUpdatePanel.call(this);
-  },
-
-  closeUpdatePanelEvent() {
-    closeUpdatePanel.call(this);
-  },
-
-  editClickEvent() {
-    this.setData({ isEditMode: true });
-  },
-
 })
 
 /**
@@ -77,52 +34,35 @@ function changeDate(targetDate) {
   let date = targetDate || new Date();
   let currentDateObj = new Date();
 
-  let showMonth, //当天显示月份
-    showYear, //当前显示年份
-    showDay, //当前显示星期
-    showDate, //当前显示第几天
-    showMonthFirstDateDay, //当前显示月份第一天的星期
-    showMonthLastDateDay, //当前显示月份最后一天的星期
-    showMonthDateCount; //当前月份的总天数
+  let showMonth, showYear, showDay, 
+    showDate,showMonthFirstDateDay, 
+    showMonthLastDateDay, showMonthDateCount; 
 
-  let data = [];
-
-  showDate = date.getDate();
+  showDate = date.getDate();//当前显示第几天
   showMonth = date.getMonth() + 1;
   showYear = date.getFullYear();
-  showDay = date.getDay();
-
+  showDay = date.getDay(); //当前显示星期
   showMonthDateCount = new Date(showYear, showMonth, 0).getDate();
   date.setDate(1);
   showMonthFirstDateDay = date.getDay(); //当前显示月份第一天的星期
   date.setDate(showMonthDateCount);
   showMonthLastDateDay = date.getDay(); //当前显示月份最后一天的星期  
 
-  let beforeDayCount = 0,
-    beforeYear, //上页月年份
-    beforMonth, //上页月份
-    afterYear, //下页年份
-    afterMonth, //下页月份
-    afterDayCount = 0, //上页显示天数
-    beforeMonthDayCount = 0; //上页月份总天数
+  let beforeDayCount = 0, beforeYear, 
+    beforMonth, afterYear, afterMonth, 
+    afterDayCount = 0, beforeMonthDayCount = 0; 
 
-  //上一个月月份
-  beforMonth = showMonth === 1 ? 12 : showMonth - 1;
-  //上一个月年份
-  beforeYear = showMonth === 1 ? showYear - 1 : showYear;
-  //下个月月份
-  afterMonth = showMonth === 12 ? 1 : showMonth + 1;
-  //下个月年份
-  afterYear = showMonth === 12 ? showYear + 1 : showYear;
-
-  //获取上一页的显示天数
-  if (showMonthFirstDateDay != 0)
+  beforMonth = showMonth === 1 ? 12 : showMonth - 1;//上一个月月份
+  beforeYear = showMonth === 1 ? showYear - 1 : showYear;//上一个月年份
+  afterMonth = showMonth === 12 ? 1 : showMonth + 1;//下个月月份
+  afterYear = showMonth === 12 ? showYear + 1 : showYear;//下个月年份
+  
+  if (showMonthFirstDateDay != 0)//获取上一页的显示天数
     beforeDayCount = showMonthFirstDateDay - 1;
   else
     beforeDayCount = 6;
 
-  //获取下页的显示天数
-  if (showMonthLastDateDay != 0)
+  if (showMonthLastDateDay != 0)//获取下页的显示天数
     afterDayCount = 7 - showMonthLastDateDay;
   else
     showMonthLastDateDay = 0;
@@ -134,7 +74,8 @@ function changeDate(targetDate) {
 
   let selected = this.data.data['selected'] || { year: showYear, month: showMonth, date: showDate };
   let selectDateText = selected.year + '年' + formatNumber(selected.month) + '月' + formatNumber(selected.date) + '日';
-
+  
+  let data = [];
   data = {
     currentDate: currentDateObj.getDate(), //当天日期第几天
     currentYear: currentDateObj.getFullYear(), //当天年份
@@ -174,7 +115,7 @@ function changeDate(targetDate) {
       year: showYear,
       month: showMonth,
       date: cIdx,
-      background: '#aad4f5'
+      background: ''
     });
     _id++;
   }
@@ -190,27 +131,8 @@ function changeDate(targetDate) {
       _id++;
     }
   }
-
   data.dates = dates;
-
-
   this.setData({ data: data, pickerDateValue: showYear + '-' + showMonth });
-}
-
-/**
- * @param {Function} func 接口
- * @param {Object} options 接口参数
- * @returns {Promise} Promise对象
-*/
-function promiseHandle(func, options) {
-  options = options || {};
-  return new Promise((resolve, reject) => {
-    if (typeof func !== 'function')
-      reject();
-    options.success = resolve;
-    options.fail = reject;
-    func(options);
-  });
 }
 
 function formatNumber(n) {
