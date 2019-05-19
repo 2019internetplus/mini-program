@@ -35,6 +35,5 @@
   padding: 37.5rpx;
 } 
 .list text {
-  font-size: large;
   color: #555555;
 }

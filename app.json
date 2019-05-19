@@ -4,12 +4,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/calendar/calendar",
-    "pages/mine/mine",
-    "pages/myreport/myreport",
-    "pages/mynews/mynews",
-    "pages/usehelp/usehelp",
-    "pages/aboutus/aboutus",
-    "pages/more/more"
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
