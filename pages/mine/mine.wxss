@@ -15,7 +15,7 @@
 } 
 .user .text {
   text-align: center;
-  color:black;
+  font-size: 120%;
 } 
 .user .more {
   position: fixed;

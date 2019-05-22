@@ -3,7 +3,6 @@
   flex-flow: row;
   align-items: center;
   padding: 20rpx;
-  border: solid 1px;
 }
 .mood {
   width: 70%;
@@ -15,26 +14,60 @@
   font-size: 150%;
   margin: 20rpx;
 }
+.mood .value {
+  font-size: 150%;
+}
 .mood .defaulttext {
+  margin: 10rpx;
   font-size: 80%;
   color: #6d6d6d;
 }
 .time {
-  margin: 40rpx;
-  border: solid 1px orange;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-}
-.time .month {
-  margin: 10rpx;
+  width: 35%;
+  position: relative;
 }
 .time .day {
   font-size: 200%;
-  margin:10rpx auto 30rpx auto;
+  position: absolute;
+  left: 0;
+  top: 100rpx;
+  right: 0;
+  bottom: 0;
+  text-align: center;
 }
-.swiper image {
+.button {
+  display: flex;
+  flex-flow: row;
+}
+.button button {
+  font-size: 100%;
+}
+swiper{
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+swiper image{
+  padding: 10%;
+  width: 80%;
+  height: 80%;
+}
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal{
+     margin-bottom: 2rpx;
+}
+.swiper-box .wx-swiper-dot{
+    width:40rpx;
+    display: inline-flex;
+    height: 10rpx;
+    margin-left: 20rpx;
+    justify-content:space-between;
+}
+.swiper-box .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 8rpx
+}
+.swiper-box .wx-swiper-dot-active::before{
+    background:rgba(244,0,0);   
 }
 
