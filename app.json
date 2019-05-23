@@ -2,15 +2,11 @@
   "pages": [
     "pages/home/home",
     "pages/home/test/test",
+    "pages/home/result/result",
     "pages/index/index",
     "pages/logs/logs",
     "pages/calendar/calendar",
-    "pages/mine/mine",
-    "pages/myreport/myreport",
-    "pages/mynews/mynews",
-    "pages/usehelp/usehelp",
-    "pages/aboutus/aboutus",
-    "pages/more/more"
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,7 +21,6 @@
         "pagePath": "pages/home/home",
         "iconPath": "images/tabbar/home-off.png",
         "selectedIconPath": "images/tabbar/home-on.png"
-
       },
       {
         "text": "日历",

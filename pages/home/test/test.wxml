@@ -1,24 +1,31 @@
-<view class="warp" style="background-image: url('/images/background.jpg')">
+<view class="warp">
   
   <view bindtap='select'>
-    <progress percent="{{per}}" show-info/>
+    <progress percent="{{per}}"/>
   </view>
   <view class='outer'>
-    <view class='describe'>{{index+1}}、{{title[list[index]]}}</view>
+    <view class='describe'><text>{{index+1}}、{{title[list[index]]}}</text></view>
     <view class='answer'>
 
+      <radio-group bindchange='select' bindtap="playmusic">
         <view class="item">
+        <radio value='{{radios[0]}}' checked='{{clear}}'>
             <text decode='{{true}}' class='text'>&nbsp;{{choice[list[index]][radios[0]]}}</text>
-          
-        </view>
-        <view class="item">
-            <text decode='{{true}}' class='text'>&nbsp;{{choice[list[index]][radios[1]]}}</text>
-         
+        </radio> 
         </view>
 
         <view class="item">
-            <text decode='{{true}}' class='text'>&nbsp;{{choice[list[index]][radios[2]]}}</text>
+        <radio value='{{radios[1]}}' checked='{{clear}}'>
+            <text decode='{{true}}' class='text'>&nbsp;{{choice[list[index]][radios[1]]}}</text>
+        </radio> 
         </view>
+
+        <view class="item">
+        <radio value='{{radios[2]}}' checked='{{clear}}'>
+            <text decode='{{true}}' class='text'>&nbsp;{{choice[list[index]][radios[2]]}}</text>
+        </radio>
+        </view>
+      </radio-group>
     </view>
   </view>
 </view>

@@ -1,7 +1,7 @@
 var postData = require("../../data/data.js");
 var progressNum = 0;//进度条
 
-//计时器
+/*
 function timing(that) {
   var seconds = that.data.seconds
   if (seconds > 21599) {
@@ -18,7 +18,9 @@ function timing(that) {
   }
     , 1000)
   formatSeconds(that)
-}
+}*/
+
+
 function formatSeconds(that) {
   var mins = 0, hours = 0, seconds = that.data.seconds, time = ''
   if (seconds < 60) {
@@ -36,6 +38,8 @@ function formatSeconds(that) {
     time: formatTime(hours) + ':' + formatTime(mins) + ':' + formatTime(seconds)
   });
 }
+
+
 function formatTime(num) {
   if (num < 10)
     return '0' + num
@@ -80,6 +84,8 @@ Page({
       radios: newRadios
     });
   },
+
+
   //点击按钮播放音乐
   playmusic: function () {
     const innerAudioContext = wx.createInnerAudioContext()
@@ -93,6 +99,8 @@ Page({
       console.log(res.errCode)
     })
   },
+
+
 
   select: function (e) {
     var tmp = e.detail.value;
@@ -125,7 +133,7 @@ Page({
 
   submit: function () {
     wx.redirectTo({
-      url: '/pages/result/result?A=' + this.data.A + '&C=' + this.data.C + '&B=' + this.data.B + '&time=' + this.data.time,
+      url: '/pages/home/result/result?A=' + this.data.A + '&C=' + this.data.C + '&B=' + this.data.B + '&time=' + this.data.time,
     })
 
     /*

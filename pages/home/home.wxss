@@ -1,0 +1,40 @@
+.top {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 20rpx;
+  border: solid 1px;
+}
+.mood {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mood .moodtext {
+  font-size: 150%;
+  margin: 20rpx;
+}
+.mood .defaulttext {
+  font-size: 80%;
+  color: #6d6d6d;
+}
+.time {
+  margin: 40rpx;
+  border: solid 1px orange;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.time .month {
+  margin: 10rpx;
+}
+.time .day {
+  font-size: 200%;
+  margin:10rpx auto 30rpx auto;
+}
+.swiper image {
+  width: 100%;
+  height: auto;
+}
+
