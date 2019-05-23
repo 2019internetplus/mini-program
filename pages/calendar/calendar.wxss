@@ -2,7 +2,7 @@
 .og-calendar {
     background-color: #FFF;
     color: #555555;
-    margin: 0 50rpx 0 50rpx
+    margin: 10rpx 50rpx 0 50rpx
 }
 .og-calendar .header {
     position: relative;
@@ -62,5 +62,6 @@
     color: #e2e2e2
 } 
 .og-calendar .body .col.current text {
+    background-color: #aad4f5;
     color: #FFF;
 }
