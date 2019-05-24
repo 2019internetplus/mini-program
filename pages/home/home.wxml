@@ -6,7 +6,7 @@
       <text wx:else class="defaulttext">今天还没有记录心情，快点击下面的按钮记录吧(^_−)☆</text>
     </view>
     <view class="time">
-      <image class="backgrandimage" src='../../images/home/backgrand.jpg' mode="widthFix" style="width:100%"></image>
+      <image class="backgrandimage" src='../../images/home/backgrand.png' mode="widthFix" style="width:100%"></image>
       <!-- <view wx:if="{{month}}" class="month">{{month}}月</view> -->
       <view wx:if="{{day}}" class="day">{{day}}</view>
     </view>

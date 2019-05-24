@@ -1,11 +1,11 @@
-// pages/aboutus/aboutus.js
+// pages/privacyProtocol/privacyProtocol.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+
   },
 
   /**

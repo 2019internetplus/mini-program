@@ -1,2 +1,4 @@
-<!--pages/aboutus/aboutus.wxml-->
-<text>pages/aboutus/aboutus.wxml</text>
+<view class="list">
+  <navigator url="privacyProtocol/privacyProtocol">隐私协议</navigator>
+  <navigator url="feedback/feedback">反馈</navigator>
+</view>

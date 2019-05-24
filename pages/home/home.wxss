@@ -30,7 +30,7 @@
   font-size: 200%;
   position: absolute;
   left: 0;
-  top: 100rpx;
+  top: 72rpx;
   right: 0;
   bottom: 0;
   text-align: center;
@@ -51,23 +51,3 @@ swiper image{
   width: 80%;
   height: 80%;
 }
-.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal{
-     margin-bottom: 2rpx;
-}
-.swiper-box .wx-swiper-dot{
-    width:40rpx;
-    display: inline-flex;
-    height: 10rpx;
-    margin-left: 20rpx;
-    justify-content:space-between;
-}
-.swiper-box .wx-swiper-dot::before{
-    content: '';
-    flex-grow: 1; 
-    background: rgba(255,255,255,0.8);
-    border-radius: 8rpx
-}
-.swiper-box .wx-swiper-dot-active::before{
-    background:rgba(244,0,0);   
-}
-

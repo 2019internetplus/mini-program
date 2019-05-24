@@ -1,4 +1,5 @@
 var _app = getApp()
+var common = require("../common.js")
 Page({
   data: { 
     menuitems: [
@@ -7,6 +8,12 @@ Page({
       { text: '使用帮助', url: 'usehelp/usehelp', icon: '../../images/mine/usehelp.png'},
       { text: '关于我们', url: 'aboutus/aboutus', icon: '../../images/mine/aboutus.png' }
     ]
+  },
+
+  toLogin: function () {
+    common.onLogin();
+    common.getUserInfo();
+    common.userInfoSetInSQL(userInfo);
   },
   onLoad: function (options) { 
   }
