@@ -1,0 +1,76 @@
+.container {
+  overflow: hidden;
+}
+
+.noNotice {
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+}
+
+.item-list{
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+}
+
+.item-info{
+  transition: left 0.2s ease-in-out;
+  border-bottom: solid 1px #e2e2e2;
+}
+
+.item-list .item-info image {
+  vertical-align: middle;
+  width: 50rpx;
+  height: 50rpx;
+  padding: 37.5rpx;
+}
+
+.info-desc{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-desc .theme{
+  font-size: 150%;
+  font-weight: 600;
+}
+
+.info-desc .time{
+  font-size: 80%;
+  color: rgb(110, 110, 110);
+}
+
+.info-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-content .message{
+  color: rgb(110, 110, 110);
+}
+
+.info-content .status_read_0 {
+    color: red;
+}
+
+.info-content .status_read_1{
+    color:rgb(110, 110, 110);
+}
+
+.item-oper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.oper-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150rpx;
+    z-index: 1;
+    color: white;
+    background: red;
+}
