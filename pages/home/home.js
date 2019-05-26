@@ -24,6 +24,17 @@ Page({
     })
   },
 
+  toRecord: function(){
+    wx.navigateTo({
+      url: '/pages/home/record/record',
+    })
+  },
+
+  toTest: function(){
+    wx.navigateTo({
+      url: '/pages/home/test/test',
+    })
+  },
   onLoad: function () {
     //获取当前时间戳  
     var timestamp = Date.parse(new Date());
@@ -42,7 +53,7 @@ Page({
       // month: M,
       day: D
     })
-    console.log("1")
+    
     let $this = this;
     //获取心灵鸡汤图片
     wx.request({

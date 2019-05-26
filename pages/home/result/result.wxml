@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class='innercontainer'>
+    <view class='time'>{{date}}</view>
+    <view class='result'>
+    <view class='score'>
+      <text class='text'>情绪指数：</text>
+      <canvas canvas-id='canvas1'></canvas>
+    </view>
+    </view>
+  </view>
+</view>
