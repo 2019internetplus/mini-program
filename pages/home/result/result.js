@@ -43,18 +43,12 @@ Page({
         color: '#7cb5ec',
         fontSize: 35
       },
-      /*subtitle: {
-        name: '收益率',
-        color: '#666666',
-        fontSize: 15
-      },*/
+      
       series: [{
-        //name: '成交量1',
         data: 90,
         stroke: false,
         color: '#7cb5ec'
       }, {
-        //name: '成交量2',
         data: 10,
         stroke: false,
         color: '#bfbfbf',
@@ -65,8 +59,29 @@ Page({
       dataLabel: false,
       legend: false,
       padding: 0
-    })
-  
+    });
+
+    new Charts({
+      animation: true,
+      canvasId: 'canvas2',
+      type: 'radar',
+      categories: ['自我肯定','焦虑','忧郁'],
+      series: [{
+        
+        data: [78,88,98]
+      }],
+      width: 400,
+      height: 200,
+      extra: {
+        radar: {
+          max: 100//雷达数值的最大值
+        }
+      },
+      legend: false,
+      disablePieStroke: true,
+      padding: 0
+    });
+
   },
 
  

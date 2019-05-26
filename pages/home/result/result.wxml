@@ -11,7 +11,29 @@
           <view class='dot'></view>
           <text class='text1'>fgdfdfs</text>
         </view>
+        <view class='textcontainer'>
+          <view class='dot'></view>
+          <text class='text1'>fgdfdfs</text>
+        </view>
+        <view class='textcontainer'>
+          <view class='dot'></view>
+          <text class='text1'>fgdfdfs</text>
+        </view>
+        <view class='textcontainer'>
+          <view class='dot'></view>
+          <text class='text1'>fgdfdfs</text>
+        </view>
+        <view class='textcontainer'>
+          <view class='dot'></view>
+          <text class='text1'>fgdfdfs</text>
+        </view>
       </view>
     </view>
   </view>
+
+ 
+    <text class='text'>三维情绪雷达图：</text>
+    <canvas canvas-id='canvas2'></canvas>
+ 
+
 </view>

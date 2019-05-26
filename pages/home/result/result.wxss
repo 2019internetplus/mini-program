@@ -6,7 +6,7 @@
 .innercontainer {
   display: flex;
   flex-direction: column;
-  height: 400rpx;
+  height: 450rpx;
   width: 90%;
   margin: 60rpx auto;
   border-radius: 20px;
@@ -45,17 +45,25 @@
 .detail {
   display: flex;
   flex-direction: column;
-  padding: 100rpx 50rpx;
+  padding: 100rpx 0rpx 50rpx 50rpx;
  
 }
 .dot {
   height: 20rpx;
   width: 20rpx;
   border-radius: 50%;
-  background-color: #7cb5ec
+  background-color: #7cb5ec;
+  margin: auto;
 }
 .textcontainer {
   display: flex;
   flex-direction: row;
-
+  
+  height: 50rpx;
+  
+}
+.text1{
+  font-size: 30rpx;
+  margin: auto 20rpx;
+ 
 }

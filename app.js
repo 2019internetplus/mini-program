@@ -11,31 +11,31 @@ App({
 
     
     // 用户登录
-    
+    wx.login({
+      success: res => {
+        if (res.code) {
+          wx.request({
+            url: 'https://api.xumengli.cn/user/v0.1/login',
+            method: 'POST',
+            data: {
+              code: res.code
+            },
+            success: (data) => {
+              wx.setStorage({
+                key: "token",
+                data: data.data.token
+              });
+            }
+          })
+        }
+      }
+    })
     wx.checkSession({
       success() {
 
       },
       fail: () => {
-        wx.login({
-          success: res => {
-            if (res.code) {
-              wx.request({
-                url: 'https://api.xumengli.cn/user/v0.1/login',
-                method: 'POST',
-                data: {
-                  code: res.code
-                },
-                success: (data) => {
-                  wx.setStorage({
-                    key: "token",
-                    data: data.data.token
-                  });
-                }
-              })
-            }
-          }
-        })
+        
       }
     })
     
@@ -58,9 +58,15 @@ App({
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }
+            },
+            fail: err=>{
+              console.log(err);
             }
           })
         }
+      },
+      fail: err =>{
+        console.log(err);
       }
     })
   },
