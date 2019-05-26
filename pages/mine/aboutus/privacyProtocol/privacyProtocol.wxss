@@ -4,15 +4,17 @@
 .h1 {
   font-size: 150%;
   font-weight: 700;
-  border-bottom: solid 3px #dbdbdb;
+  border-bottom: solid 2rpx #e2e2e2;
   text-align: center;
-  padding: 30rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
 }
 .h3 {
   font-size: 130%;
   font-weight: 700;
-  border-bottom: solid 1px #e2e2e2;
+  border-bottom: solid 2rpx #e2e2e2;
   padding: 20rpx;
+  margin-bottom: 20rpx;
 }
 text {
   line-height:1.5em;           /*行间距（行高）*/

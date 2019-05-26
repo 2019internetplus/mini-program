@@ -8,7 +8,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarBackgroundColor": "#FFdead",
     "navigationBarTitleText": "心柚",
     "navigationBarTextStyle": "black"
   },
@@ -19,7 +19,6 @@
         "pagePath": "pages/home/home",
         "iconPath": "images/tabbar/home-off.png",
         "selectedIconPath": "images/tabbar/home-on.png"
-
       },
       {
         "text": "日历",
@@ -37,7 +36,7 @@
     "color": "#bfbfbf",
     "selectedColor": "#515151",
     "borderStyle": "white",
-    "backgroundColor": "#FFFFFF"
+    "backgroundColor": "#ffdead"
   },
   "sitemapLocation": "sitemap.json"
 }

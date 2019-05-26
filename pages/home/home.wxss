@@ -53,11 +53,10 @@
   top:20rpx;
 }
 .button button {
-  opacity: .5;
   height: 100rpx;
   width: 100rpx;
   border:0px solid #353535;
-  background-color: #aad4f5;
+  background-color: #ffdead;
   border-radius: 50%;
 }
 .button_text{

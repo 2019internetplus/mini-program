@@ -1,0 +1,21 @@
+.section{
+  margin-top: 50rpx;
+}
+textarea {
+  margin: 10rpx auto;
+  padding: 10rpx;
+  width: 650rpx;
+  border: solid 2rpx #eeeeee;
+}
+.section button {
+  width: 80%;
+  margin-top: 80rpx;
+  border-radius: 98rpx; 
+  background-color: #ffdead;
+}
+.section button::after {
+  border-radius: 98rpx;
+}
+.hover-class {
+  background-color: green;
+}

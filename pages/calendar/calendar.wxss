@@ -2,7 +2,7 @@
 .og-calendar {
     background-color: #FFF;
     color: #555555;
-    margin: 10rpx 50rpx 0 50rpx
+    margin: 0 50rpx 0 50rpx
 }
 .og-calendar .header {
     position: relative;
@@ -42,7 +42,7 @@
     display: inline-flex;
     justify-content: center;
     text-align: center;
-    padding: 15rpx 0;
+    padding: 5rpx 0;
 }
 .og-calendar .col text {
     display: block;
@@ -62,6 +62,15 @@
     color: #e2e2e2
 } 
 .og-calendar .body .col.current text {
-    background-color: #aad4f5;
+    background-color: #ffdead;
     color: #FFF;
+}
+.record_text{
+  color: #555555;
+  text-align: center;
+  height: 80rpx;
+}
+.message{
+  word-wrap: break-word; 
+  text-align: center;
 }
