@@ -31,17 +31,13 @@ App({
         }
       }
     })
-=======
-    
->>>>>>> 594633028046933c95abaf59bb207eeb06ec2fd8
+
     wx.checkSession({
       success() {
 
       },
       fail: () => {
-<<<<<<< HEAD
-       
-=======
+
         // 用户登录
         wx.login({
           success: res => {
@@ -63,7 +59,6 @@ App({
           }
         })
 
->>>>>>> 594633028046933c95abaf59bb207eeb06ec2fd8
       }
     })
     
@@ -76,17 +71,14 @@ App({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
-<<<<<<< HEAD
+
               // 可以将 res 发送给后台解码出 unionId
               console.log("1")
               this.globalData.userInfo = res.userInfo
               console.log(res);
               wx.setStorageSync("nickName", res.userInfo.nickName);
               wx.setStorageSync("avatarUrl", res.userInfo.avatarUrl);
-=======
-              wx.setStorageSync('nickName', res.userInfo.nickName);
-              wx.setStorageSync('avatarUrl', res.userInfo.avatarUrl);
->>>>>>> 594633028046933c95abaf59bb207eeb06ec2fd8
+
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
