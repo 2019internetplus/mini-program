@@ -2,10 +2,16 @@
   <view class='innercontainer'>
     <view class='time'>{{date}}</view>
     <view class='result'>
-    <view class='score'>
-      <text class='text'>情绪指数：</text>
-      <canvas canvas-id='canvas1'></canvas>
-    </view>
+      <view class='score'>
+        <text class='text'>情绪指数：</text>
+        <canvas canvas-id='canvas1'></canvas>
+      </view>
+      <view class='detail'>
+        <view class='textcontainer'>
+          <view class='dot'></view>
+          <text class='text1'>fgdfdfs</text>
+        </view>
+      </view>
     </view>
   </view>
 </view>

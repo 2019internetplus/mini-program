@@ -13,13 +13,13 @@
   </view>
 
     <view class="two">
-      <button plain="true">
+      <button plain="true" bindtap='toRecord'>
         <image src="../../images/plus.png"></image>
       </button>
       <view class="button_text">记录</view>
     </view>
     <view class="two">
-      <button plain="true">
+      <button plain="true" bindtap='toTest'>
         <image src="../../images/plus.png"></image>
       </button>
       <view class="button_text">测试</view>

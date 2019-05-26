@@ -32,7 +32,7 @@ Page({
 
   toTest: function(){
     wx.navigateTo({
-      url: '/pages/home/test/test',
+      url: '/pages/home/result/result',
     })
   },
   onLoad: function () {
