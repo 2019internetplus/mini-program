@@ -1,5 +1,4 @@
-
-
+// pages/mine/myreport/month/month.js
 Page({
 
   /**

@@ -10,6 +10,16 @@ Page({
     changeDate.call(this);
   },
 
+  datePickerChangeEvent(e) {
+    const date = new Date(Date.parse(e.detail.value));
+    changeDate.call(this, new Date(date.getFullYear(), date.getMonth(), 1));
+  }, 
+  
+  changeDateEvent(e) {
+    const { year, month } = e.currentTarget.dataset;
+    changeDate.call(this, new Date(year, parseInt(month) - 1, 1));
+  }, 
+
   dateClickEvent(e) {
     const { year, month, date } = e.currentTarget.dataset;
     const { data } = this.data;
@@ -23,7 +33,6 @@ Page({
 
     changeDate.call(this, new Date(year, parseInt(month) - 1, date));
   },
-
 })
 
 /**

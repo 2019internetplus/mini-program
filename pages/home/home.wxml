@@ -1,4 +1,4 @@
-<view class="home">
+<view class="container">
   <view class="top">
     <view class="mood">
       <view class="moodtext">今日心情值</view>
@@ -12,20 +12,21 @@
     </view>
   </view>
 
+  <view class="button">
     <view class="two">
-      <button plain="true">
-        <image src="../../images/plus.png"></image>
-      </button>
+        <button plain="true" bindtap='toRecord'>
+          <image src="../../images/plus.png"></image>
+        </button>
       <view class="button_text">记录</view>
     </view>
     <view class="two">
-      <button plain="true">
+      <button plain="true" bindtap='toTest'>
         <image src="../../images/plus.png"></image>
       </button>
       <view class="button_text">测试</view>
     </view>
+  </view>
 
-  
   <view class="banner">
     <swiper class="swiper_box" indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:{{Hei}}'>
       <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
