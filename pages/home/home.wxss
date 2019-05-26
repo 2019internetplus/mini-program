@@ -36,8 +36,46 @@
   bottom: 0;
   text-align: center;
 }
+
+
+.button {
+  margin: 0 50rpx 0 50rpx;
+  padding: 20rpx 0 20rpx 0;
+  display: flex;
+  flex-flow: row;
+  border-top: 2rpx solid #e2e2e2;
+}
+.two{
+  width: 375rpx;
+}
+.two image{
+  height: 60rpx;
+  width: 60rpx;
+  position:relative;
+  right:10rpx;
+  top:20rpx;
+}
+.button button {
+  height: 100rpx;
+  width: 100rpx;
+  border:0px solid #353535;
+  background-color: #ffdead;
+  border-radius: 50%;
+}
+.button_text{
+  text-align: center;
+  font-size: 28rpx;
+  color: #555555;
+}
+swiper{
+  width: 100%;
+  height: 100%;
+}
+
+
 swiper image{
   padding:10%;
   width: 80%;
   height: 80%;
 }
+

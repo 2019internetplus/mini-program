@@ -12,6 +12,7 @@ Page({
     Hei: ""
   },
 
+  
   imgH: function (e) {
     var winWid = wx.getSystemInfoSync().windowWidth;         //获取当前屏幕的宽度
     var imgh = e.detail.height;　　　　　　　　　　　　　　　　//图片高度
@@ -33,7 +34,7 @@ Page({
 
   toTest: function(){
     wx.navigateTo({
-      url: '/pages/home/result/result',
+      url: '/pages/home/test/test',
     })
   },
 

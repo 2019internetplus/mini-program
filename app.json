@@ -10,11 +10,18 @@
     "pages/mine/mine",
     "pages/start/start",
     "pages/mine/myreport/week/week",
-    "pages/mine/myreport/month/month"
+    "pages/mine/myreport/month/month",
+    "pages/mine/more/more",
+    "pages/mine/myreport/myreport",
+    "pages/mine/mynotice/mynotice",
+    "pages/mine/usehelp/usehelp",
+    "pages/mine/aboutus/aboutus"
+    
+
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarBackgroundColor": "#FFdead",
     "navigationBarTitleText": "心柚",
     "navigationBarTextStyle": "black"
   },
@@ -42,7 +49,7 @@
     "color": "#bfbfbf",
     "selectedColor": "#515151",
     "borderStyle": "white",
-    "backgroundColor": "#FFFFFF"
+    "backgroundColor": "#ffdead"
   },
   "sitemapLocation": "sitemap.json"
 }

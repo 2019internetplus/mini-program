@@ -1,4 +1,5 @@
-// pages/home/record/record.js
+
+
 Page({
 
   /**

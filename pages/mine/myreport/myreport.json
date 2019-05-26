@@ -1,18 +1,18 @@
 {
   "pages": [
-    "pages/mine/myreport/week/week",
-    "pages/mine/myreport/month/month"
+    "week/week",
+    "month/month"
   ],
 
-  "tabbar": {
+  "tabBar": {
     "list": [
       {
         "text": "周",
-        "pagePath": "pages/mine/myreport/week/week"
+        "pagePath": "week/week"
       },
       {
         "text": "月",
-        "pagePath": "pages/mine/myreport/month/month"
+        "pagePath": "month/month"
       }
     ],
     "color": "#bfbfbf",

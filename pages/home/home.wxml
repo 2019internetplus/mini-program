@@ -12,11 +12,11 @@
     </view>
   </view>
 
-
+  <view class="button">
     <view class="two">
-      <button plain="true" bindtap='toRecord'>
-        <image src="../../images/plus.png"></image>
-      </button>
+        <button plain="true" bindtap='toRecord'>
+          <image src="../../images/plus.png"></image>
+        </button>
       <view class="button_text">记录</view>
     </view>
     <view class="two">
@@ -25,8 +25,7 @@
       </button>
       <view class="button_text">测试</view>
     </view>
-
-  
+  </view>
 
   <view class="banner">
     <swiper class="swiper_box" indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:{{Hei}}'>

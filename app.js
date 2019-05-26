@@ -32,8 +32,6 @@ App({
       }
     })
 
-    
-
     wx.checkSession({
       success() {
 
@@ -60,8 +58,6 @@ App({
             }
           }
         })
-
-
 
       }
     })
