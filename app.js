@@ -9,8 +9,40 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    
-    
+    //Set commit  
+    /**
+     *  
+     */
+    if(!wx.getStorageSync('commit_time')){
+      const date = new Date().getDate() - 1;
+      wx.setStorageSync('commit_time', date);
+    }
+    /* begin debug */
+
+    wx.login({
+      success: res => {
+        if (res.code) {
+          wx.request({
+            url: 'https://api.xumengli.cn/user/v0.1/login',
+            method: 'POST',
+            data: {
+              code: res.code
+            },
+            success: (data) => {
+              wx.setStorage({
+                key: "token",
+                data: data.data.token
+              });
+
+              wx.setStorageSync('openid', data.data.openid)
+              console.log(data.data.openid);
+            }
+          })
+        }
+      }
+    })
+
+    /* end debug */
     wx.checkSession({
       success() {
 
@@ -31,6 +63,8 @@ App({
                     key: "token",
                     data: data.data.token
                   });
+                  wx.setStorageSync('openid', data.data.openid);
+                  console.log(data.data.openid);
                 }
               })
             }
