@@ -1,4 +1,26 @@
 {
+  "pages": [
+    "pages/mine/myreport/week/week",
+    "pages/mine/myreport/month/month"
+  ],
+
+  "tabbar": {
+    "list": [
+      {
+        "text": "周",
+        "pagePath": "pages/mine/myreport/week/week"
+      },
+      {
+        "text": "月",
+        "pagePath": "pages/mine/myreport/month/month"
+      }
+    ],
+    "color": "#bfbfbf",
+    "selectedColor": "#515151",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF"
+  },
+
 
   "usingComponents": {},
   "navigationBarTitleText": "我的报告"

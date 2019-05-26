@@ -9,7 +9,7 @@
   background-color: #FFF;
 } 
 
-
+/*
 page::before{
     content: '';
     position: fixed;
@@ -19,4 +19,4 @@ page::before{
     height: 2rpx;
     background-color: #cdcdcd;
     z-index: 9999;
-}
+}*/

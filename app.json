@@ -8,7 +8,9 @@
     "pages/logs/logs",
     "pages/calendar/calendar",
     "pages/mine/mine",
-    "pages/start/start"
+    "pages/start/start",
+    "pages/mine/myreport/week/week",
+    "pages/mine/myreport/month/month"
   ],
   "window": {
     "backgroundTextStyle": "light",
