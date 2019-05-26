@@ -20,3 +20,22 @@
   font-size: 30rpx;
   border-bottom: dashed #cdcdcd 0.5rpx;
 }
+
+.test {
+  
+  /*transform: scale(0.5)*/
+}
+.result {
+  display: flex;
+  flex-direction: row
+}
+
+.socre {
+  display: flex;
+  flex-direction: column
+}
+
+.text {
+  font-size: 30rpx;
+  margin: 25rpx 50rpx;
+}

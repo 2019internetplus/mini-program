@@ -3,6 +3,7 @@
     "pages/home/home",
     "pages/home/test/test",
     "pages/home/result/result",
+    "pages/home/record/record",
     "pages/index/index",
     "pages/logs/logs",
     "pages/calendar/calendar",

@@ -12,8 +12,8 @@
     </view>
   </view>
   <view class="button">
-    <button plain="true">记录</button>
-    <button plain="true">测试</button>
+    <button plain="true" bindtap='toRecord'>记录</button>
+    <button plain="true" bindtap='toTest'>测试</button>
   </view>
   <view class="banner">
     <swiper class="swiper_box" indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:{{Hei}}'>

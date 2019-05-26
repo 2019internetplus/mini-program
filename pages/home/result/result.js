@@ -1,4 +1,5 @@
 var util = require('../../../utils/util.js');
+var Charts = require('../../../utils/wxcharts.js');
 
 Page({
 
@@ -26,8 +27,54 @@ Page({
     this.setData({
       date: date,
     }); 
+
+    new Charts({
+      animation: true,
+      canvasId: 'canvas1',
+      type: 'ring',
+      extra: {
+        ringWidth: 10,//圆环的宽度
+        pie: {
+          offsetAngle: -90//圆环的角度
+        }
+      },
+      title: {
+        name: '90',
+        color: '#7cb5ec',
+        fontSize: 35
+      },
+      /*subtitle: {
+        name: '收益率',
+        color: '#666666',
+        fontSize: 15
+      },*/
+      series: [{
+        //name: '成交量1',
+        data: 90,
+        stroke: false,
+        color: '#7cb5ec'
+      }, {
+        //name: '成交量2',
+        data: 10,
+        stroke: false,
+        color: '#bfbfbf',
+      }, ],
+      disablePieStroke: true,
+      width: 200,
+      height: 150,
+      dataLabel: false,
+      legend: false,
+      padding: 0
+    })
   
   },
+
+ 
+
+  /*
+  wx:navigateBack({
+    url: 'pages/home/home',
+  }),*/
 
   /**
    * 生命周期函数--监听页面初次渲染完成
