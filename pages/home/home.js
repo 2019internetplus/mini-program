@@ -36,7 +36,7 @@ Page({
 
   toTest: function(){
     wx.navigateTo({
-      url: '/pages/home/result/result',
+      url: '/pages/home/test/test',
     })
   },
   onLoad: function () {
