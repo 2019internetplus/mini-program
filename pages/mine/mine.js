@@ -1,5 +1,7 @@
 var _app = getApp()
 var common = require("../common.js")
+
+
 Page({
   data: { 
     userinfo:{
