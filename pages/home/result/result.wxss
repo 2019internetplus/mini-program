@@ -1,0 +1,41 @@
+.container {
+  height: 100%;
+  width: 100%
+}
+
+.innercontainer {
+  display: flex;
+  flex-direction: column;
+  height: 400rpx;
+  width: 90%;
+  margin: 60rpx auto;
+  border-radius: 20px;
+  border: solid #cdcdcd 0.5rpx;
+  /*box-shadow:  20rpx 20rpx 0rpx 20rpx #cdcdcd inset;*/
+}
+
+.time {
+  margin: 0rpx 50rpx;
+  padding: 25rpx 0rpx;
+  font-size: 30rpx;
+  border-bottom: dashed #cdcdcd 0.5rpx;
+}
+
+.test {
+  
+  /*transform: scale(0.5)*/
+}
+.result {
+  display: flex;
+  flex-direction: row
+}
+
+.socre {
+  display: flex;
+  flex-direction: column
+}
+
+.text {
+  font-size: 30rpx;
+  margin: 25rpx 50rpx;
+}

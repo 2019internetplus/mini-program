@@ -1,16 +1,15 @@
+//获取应用实例
 const App = getApp()
 var that;
-var common = require('utils/getCode.js');
-var Bmob = require("utils/bmob.js");
-var util = require('utils/util.js');
+var Bmob = require("../../utils/bmob.js");
+var util = require('../../utils/util.js');
 
 Page({
   data: {
-    noticeList:[],
+    noticeList: [],
     noticeCount:0,
   },
-
-  //-----------------------删除通知--------------------------------
+  //删除通知
   deletePlyre: function (e) {
     var id = e.currentTarget.dataset.id; //消息通知的id
     var Plyre = Bmob.Object.extend("Plyre");
@@ -19,7 +18,12 @@ Page({
       success: function (result) {
         result.destroy({
           success: function (myObject) {
-            common.dataLoading("删除成功", "success");
+            wx.showToast({
+              title: '删除成功',
+              icon: 'success',
+              duration: 2000
+            })
+            console.log("删除消息成功");
             that.onShow();
           },
           error: function (myObject, error) {
@@ -31,6 +35,7 @@ Page({
         console.log(error);
       }
     })
+
   },
 
   //-----------滑动删除通知---------------------------
@@ -52,10 +57,13 @@ Page({
     noticeList && this.setData({ noticeList })
     this.deletePlyre(e);
   },
+  //-------------------------------------------------------
 
-  //-----------点击阅读详情----------------------
+  //点击阅读通知详情
   readDetail: function (event) {
-    var id = event.currentTarget.dataset.id; //消息的id
+    console.log(event);
+    var id = event.currentTarget.dataset.id; //消息通知的id
+    console.log("消息通知的id");
     var Plyre = Bmob.Object.extend("Plyre");
     var plyre = new Bmob.Query(Plyre);
     plyre.get(id, {
@@ -72,10 +80,10 @@ Page({
     })
   },
 
+
   onLoad: function (options) {
 
   },
-
   onReady: function () {
 
   },
@@ -84,14 +92,16 @@ Page({
     var user_id = wx.getStorageSync('user_id')
     var me = new Bmob.User();
     me.id = user_id;
-    //**********查询未读消息****************************************** */
+    //**********查询未读通知****************************************** */
     //先查询未读消息有多少条
     var Diary = Bmob.Object.extend("Plyre");
     var query = new Bmob.Query(Diary);
     query.equalTo("is_read", 0);
     query.equalTo("fid", user_id);
+    query.equalTo("bigtype", 2); //查询通知类的动态信息
     query.count({
       success: function (count) {
+        console.log("共有 " + count + " 条未读通知");
         that.setData({
           noticeCount: count
         });
@@ -99,14 +109,15 @@ Page({
       error: function (error) {
       }
     });
-    //再查询全部消息，包括已读
+    //再查询全部通知，包括已读
     var Plyre = Bmob.Object.extend("Plyre");
     var plyre = new Bmob.Query(Plyre);
     plyre.equalTo("fid", user_id);
+    plyre.equalTo("bigtype", 2); //查询消息类的动态信息
     plyre.limit(50);
     plyre.descending("createdAt"); //按照时间降序
     var noticeList = new Array();
-    plyre.find({ //查询消息的详细信息，并返回显示
+    plyre.find({ //查询通知的详细信息，并返回显示
       success: function (result) {
         for (var i = 0; i < result.length; i++) {
           var id = result[i].id; //消息的id
@@ -130,6 +141,7 @@ Page({
           }
           noticeList.push(jsonA);
         }
+        console.log(noticeList);
         that.setData({
           noticeList: noticeList
         })

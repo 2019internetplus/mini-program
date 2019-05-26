@@ -1,4 +1,4 @@
-<view class="home">
+<view class="container">
   <view class="top">
     <view class="mood">
       <view class="moodtext">今日心情值</view>
@@ -11,6 +11,7 @@
       <view wx:if="{{day}}" class="day">{{day}}</view>
     </view>
   </view>
+<<<<<<< HEAD
   <view class="button">
     <view class="two">
       <navigator url="record/record">
@@ -27,6 +28,9 @@
       <view class="button_text">测试</view>
     </view>
   </view>
+=======
+
+>>>>>>> master
   <view class="banner">
     <swiper class="swiper_box" indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:{{Hei}}'>
       <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">

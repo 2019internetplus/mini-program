@@ -4,6 +4,7 @@
   height:350rpx;
   display: flex;
   flex-flow: column;
+  /*border-bottom: solid 10rpx #e2e2e2;*/
 } 
 .user .avatar {
   margin: 50rpx auto 0 auto;

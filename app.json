@@ -1,10 +1,19 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/home/test/test",
+    "pages/home/result/result",
+    "pages/home/record/record",
     "pages/index/index",
     "pages/logs/logs",
     "pages/calendar/calendar",
-    "pages/mine/mine"
+    "pages/mine/mine",
+      "pages/mine/more/more",
+      "pages/mine/myreport/myreport",
+      "pages/mine/mynotice/mynotice",
+      "pages/mine/usehelp/usehelp",
+      "pages/mine/aboutus/aboutus",
+    "pages/start/start"
   ],
   "window": {
     "backgroundTextStyle": "light",

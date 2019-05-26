@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--pages/record/record.wxml-->
 <view class="section">
   <form bindsubmit="bindFormSubmit">
@@ -5,3 +6,7 @@
     <button form-type="submit" hover-class="hover-class">提交</button>
   </form>
 </view>
+=======
+<!--pages/home/record/record.wxml-->
+<text>pages/home/record/record.wxml</text>
+>>>>>>> master

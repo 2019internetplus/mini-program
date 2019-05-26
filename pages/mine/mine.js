@@ -1,7 +1,13 @@
 var _app = getApp()
 var common = require("../common.js")
+
+
 Page({
   data: { 
+    userinfo:{
+      nickName: wx.getStorageSync('nickName'),
+      avatarUrl: wx.getStorageSync('avatarUrl')
+    },
     menuitems: [
       { text: '我的报告', url: 'myreport/myreport', icon: '../../images/mine/myreport.png' },
       { text: '我的消息', url: 'mynotice/mynotice', icon: '../../images/mine/mynotice.png'}, 

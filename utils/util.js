@@ -95,6 +95,7 @@ function buttonClicked(self) {
   }, 500)
 }
 
+
 module.exports = {
   formatTime: formatTime,
   getDateDiff: getDateDiff,
