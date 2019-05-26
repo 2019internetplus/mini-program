@@ -53,7 +53,7 @@ Page({
       // month: M,
       day: D
     })
-    console.log("1")
+    
     let $this = this;
     //获取心灵鸡汤图片
     wx.request({

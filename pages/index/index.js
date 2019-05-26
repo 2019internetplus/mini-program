@@ -16,17 +16,6 @@ Page({
     })
   },
   onLoad: function () {
-    wx.request({
-      url: 'https://api.xumengli.cn/musiclists/v0.1/list?start=0&count=10',
-      method: "GET",
-      dataType: "json",
-      success: function (data) {
-        console.log(data);
-      },
-      fail: function (err) {
-        console.log(err);
-      }
-    });
   },
   getUserInfo: function(e) {
     console.log(e)

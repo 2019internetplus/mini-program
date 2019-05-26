@@ -4,7 +4,7 @@
     <text class="noNotice">暂无消息</text>
   </view>
   <!-- 有消息记录 -->
-  <view class="count">共有{{noticeCount}}条未读消息</view>
+  <view class="count">共有{{notreadCount}}条未读消息</view>
   <view class="item-list" wx:for="{{noticeList}}" wx:for-item="item" wx:for-index="index" wx:key="that">
     <view class="item-info" data-index="{{index}}" bindtouchstart="touchSNotice" bindtouchmove="touchMNotice" bindtouchend="touchENotice" style="left:{{item.left + 'rpx'}}" bindtap='readDetail' data-id="{{item.id}}">
       <image src="images/mine/xinyou.jpg"></image>
