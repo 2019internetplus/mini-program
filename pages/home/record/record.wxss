@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .section{
   margin-top: 50rpx;
 }
@@ -20,6 +21,9 @@ textarea {
 .hover-class {
   background-color: green;
 }
+=======
+/* pages/home/record/record.wxss */
+>>>>>>> master
 =======
 /* pages/home/record/record.wxss */
 >>>>>>> master

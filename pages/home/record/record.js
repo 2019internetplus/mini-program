@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // pages/record/record.js
+=======
+// pages/home/record/record.js
+>>>>>>> master
 =======
 // pages/home/record/record.js
 >>>>>>> master

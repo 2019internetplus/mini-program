@@ -12,6 +12,7 @@
     </view>
   </view>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <view class="button">
     <view class="two">
       <navigator url="record/record">
@@ -28,6 +29,9 @@
       <view class="button_text">测试</view>
     </view>
   </view>
+=======
+
+>>>>>>> master
 =======
 
 >>>>>>> master
