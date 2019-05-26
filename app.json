@@ -7,7 +7,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/calendar/calendar",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/start/start"
   ],
   "window": {
     "backgroundTextStyle": "light",
