@@ -1,0 +1,35 @@
+.feedback {
+  display: flex;
+  flex-flow: column;
+}
+.select {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+}
+.normal_button{
+  background: white;
+}
+
+.checked_button {
+  background: rgba(0, 150, 0, 0.74);
+}
+textarea {
+  margin: 10rpx auto;
+  border: 1px solid;
+  padding: 10px;
+}
+.section button {
+  width: 80%;
+  margin-top: 80rpx;
+  background-color: beige;
+  border-radius: 98rpx; 
+}
+.section button::after {
+  border-radius: 98rpx;
+}
+.hover-class {
+  background-color: green;
+}

@@ -6,15 +6,26 @@
       <text wx:else class="defaulttext">今天还没有记录心情，快点击下面的按钮记录吧(^_−)☆</text>
     </view>
     <view class="time">
-      <image class="backgrandimage" src='../../images/home/backgrand.jpg' mode="widthFix" style="width:100%"></image>
+      <image class="backgrandimage" src='../../images/home/backgrand.png' mode="widthFix" style="width:100%"></image>
       <!-- <view wx:if="{{month}}" class="month">{{month}}月</view> -->
       <view wx:if="{{day}}" class="day">{{day}}</view>
     </view>
   </view>
-  <view class="button">
-    <button plain="true" bindtap='toRecord'>记录</button>
-    <button plain="true" bindtap='toTest'>测试</button>
-  </view>
+
+    <view class="two">
+      <button plain="true">
+        <image src="../../images/plus.png"></image>
+      </button>
+      <view class="button_text">记录</view>
+    </view>
+    <view class="two">
+      <button plain="true">
+        <image src="../../images/plus.png"></image>
+      </button>
+      <view class="button_text">测试</view>
+    </view>
+
+  
   <view class="banner">
     <swiper class="swiper_box" indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:{{Hei}}'>
       <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">

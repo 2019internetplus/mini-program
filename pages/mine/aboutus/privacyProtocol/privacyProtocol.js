@@ -1,4 +1,4 @@
-// pages/mynews/mynews.js
+// pages/privacyProtocol/privacyProtocol.js
 Page({
 
   /**

@@ -3,11 +3,7 @@ Page({
   data: {
     //这是轮播图图片
     imgUrls: [
-      '../../images/banner/1.jpg',
-      '../../images/banner/2.jpg',
-      '../../images/banner/3.jpg',
-      '../../images/banner/4.jpg',
-      '../../images/banner/5.jpg'
+      
     ],
     indicatordots: true,
     autoplay: true,//自动播放
@@ -57,11 +53,39 @@ Page({
       // month: M,
       day: D
     })
-
-    
+    console.log("1")
+    let $this = this;
+    //获取心灵鸡汤图片
+    wx.request({
+      url: 'https://api.xumengli.cn/soulsoup/v0.1/get',
+      method: "GET",
+      dataType: "json",
+      success:function(data){ //success callback
+        if(data.data.code == 100){
+          let image_src = []
+          for(let i = 0; i < data.data.data.length; i++)
+          image_src.push(data.data.data[i].image_src);
+          
+          $this.setData({imgUrls: image_src}); // set imageUrls data
+        }else
+          wx.showToast({
+            title: data.data.message,
+            icon: 'none',
+          });
+        
+      },
+      fail: function(err){
+        wx.showToast({
+          title: err,
+          icon: 'none'
+        });
+      }
+    })
   },
   onReady: function() {
+    
   },
   onShow: function () {
   },
 })
+

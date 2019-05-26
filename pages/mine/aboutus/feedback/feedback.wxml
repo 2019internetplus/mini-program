@@ -1,0 +1,13 @@
+<view class="feedback">
+<view class="select">
+  <block wx:for="{{buttons}}" wx:key="buttons">
+  <button class='{{item.checked?"checked_button":"normal_button"}}' data-id='{{item.id}}' bindtap='radioButtonTap'>{{item.name}}</button>
+  </block>
+</view>
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="写点什么吧~" auto-focus="true" name="textarea" />
+    <button form-type="submit" hover-class="hover-class">提交</button>
+  </form>
+</view>
+</view>
