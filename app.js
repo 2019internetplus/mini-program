@@ -11,31 +11,31 @@ App({
 
     
     // 用户登录
-    
+    wx.login({
+      success: res => {
+        if (res.code) {
+          wx.request({
+            url: 'https://api.xumengli.cn/user/v0.1/login',
+            method: 'POST',
+            data: {
+              code: res.code
+            },
+            success: (data) => {
+              wx.setStorage({
+                key: "token",
+                data: data.data.token
+              });
+            }
+          })
+        }
+      }
+    })
     wx.checkSession({
       success() {
 
       },
       fail: () => {
-        wx.login({
-          success: res => {
-            if (res.code) {
-              wx.request({
-                url: 'https://api.xumengli.cn/user/v0.1/login',
-                method: 'POST',
-                data: {
-                  code: res.code
-                },
-                success: (data) => {
-                  wx.setStorage({
-                    key: "token",
-                    data: data.data.token
-                  });
-                }
-              })
-            }
-          }
-        })
+       
       }
     })
     
@@ -49,6 +49,7 @@ App({
           wx.getUserInfo({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
+              console.log("1")
               this.globalData.userInfo = res.userInfo
               console.log(res);
               wx.setStorageSync("nickName", res.userInfo.nickName);

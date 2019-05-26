@@ -17,24 +17,13 @@ Page({
     var imgh = e.detail.height;　　　　　　　　　　　　　　　　//图片高度
     var imgw = e.detail.width;
     var swiperH = winWid * imgh;　　　　　　//等比设置swiper的高度
-    var swiperHei = swiperH / imgw;
+    var swiperHei = swiperH / imgw;        
     var swiperHeight = swiperH + "px";
     this.setData({
       Hei: swiperHeight　　　　　　　　//设置高度
     })
   },
 
-  toRecord: function(){
-    wx.navigateTo({
-      url: '/pages/home/record/record',
-    })
-  },
-
-  toTest: function(){
-    wx.navigateTo({
-      url: '/pages/home/test/test',
-    })
-  },
   onLoad: function () {
     //获取当前时间戳  
     var timestamp = Date.parse(new Date());
