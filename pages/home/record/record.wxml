@@ -1,4 +1,8 @@
 <!--pages/record/record.wxml-->
+<view class="container">
+  <view class="title">今日心情值:</view>
+  <input class="input_grade"placeholder="输入心情值"></input>
+</view>
 <view class="section">
   <form bindsubmit="bindFormSubmit">
     <textarea placeholder="今天也是元气满满的一天呢~ 来记录一下吧！" auto-focus="true" name="textarea" />
