@@ -71,10 +71,9 @@ swiper{
   width: 100%;
   height: 100%;
 }
-
-
 swiper image{
-  padding:10%;
+  border-radius:30%; 
+  padding: 0 10% 0 10%;
   width: 80%;
   height: 80%;
 }
