@@ -17,9 +17,9 @@ Page({
     var winWid = wx.getSystemInfoSync().windowWidth;         //获取当前屏幕的宽度
     var imgh = e.detail.height;　　　　　　　　　　　　　　　　//图片高度
     var imgw = e.detail.width;
-    var swiperH = winWid * imgh;　　　　　　//等比设置swiper的高度
+    var swiperH = winWid * imgh;      //等比设置swiper的高度
     var swiperHei = swiperH / imgw;        
-    var swiperHeight = swiperH + "px";
+    var swiperHeight = swiperHei + "px";
     this.setData({
       Hei: swiperHeight　　　　　　　　//设置高度
     })

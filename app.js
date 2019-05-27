@@ -9,7 +9,7 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-<<<<<<< HEAD
+
     //Set commit  
     /**
      *  
@@ -20,11 +20,11 @@ App({
     }
     /* begin debug */
 
-=======
+
     
 
     // 用户登录
->>>>>>> 3f9936a28416b1208934b49e8ef29a79670ddb5d
+
     wx.login({
       success: res => {
         if (res.code) {
@@ -39,22 +39,19 @@ App({
                 key: "token",
                 data: data.data.token
               });
-<<<<<<< HEAD
+
 
               wx.setStorageSync('openid', data.data.openid)
               console.log(data.data.openid);
-=======
->>>>>>> 3f9936a28416b1208934b49e8ef29a79670ddb5d
+
             }
           })
         }
       }
     })
 
-<<<<<<< HEAD
+
     /* end debug */
-=======
->>>>>>> 3f9936a28416b1208934b49e8ef29a79670ddb5d
     wx.checkSession({
       success() {
 
