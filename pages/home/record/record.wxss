@@ -1,4 +1,22 @@
-
+.container{
+  margin: 50rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+.title{
+  width: 50%;
+  text-align: center;
+  font-size: 120%;
+  margin: 20rpx;
+}
+.input_grade{
+  width: 50%;
+  margin: 20rpx;
+  font-size: 120%;
+  text-align: center;
+  border-radius: 10%;
+}
 .section{
   margin-top: 50rpx;
 }

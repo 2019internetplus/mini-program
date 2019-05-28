@@ -1,6 +1,10 @@
 var app = getApp();
 Page({
   data: {
+
+    //心情值
+    moodvalue: false,
+    value: "--",
     //这是轮播图图片
     imgUrls: [
       
@@ -17,9 +21,9 @@ Page({
     var winWid = wx.getSystemInfoSync().windowWidth;         //获取当前屏幕的宽度
     var imgh = e.detail.height;　　　　　　　　　　　　　　　　//图片高度
     var imgw = e.detail.width;
-    var swiperH = winWid * imgh;　　　　　　//等比设置swiper的高度
+    var swiperH = winWid * imgh;      //等比设置swiper的高度
     var swiperHei = swiperH / imgw;        
-    var swiperHeight = swiperH + "px";
+    var swiperHeight = swiperHei + "px";
     this.setData({
       Hei: swiperHeight　　　　　　　　//设置高度
     })
@@ -83,6 +87,36 @@ Page({
           title: err,
           icon: 'none'
         });
+      }
+    });
+
+    //获取今日心情值
+
+    wx.request({
+      url: 'https://api.xumengli.cn/em/v0.1/getToday?token=' + wx.getStorageSync('token') + '&openid=' + wx.getStorageSync('openid'),
+      success: (res)=>{
+        if(res.data.code === 100){
+          if(res.data.data.length != 0){
+            $this.setData({
+              moodvalue: true
+            });
+            $this.setData({
+              value: res.data.data[0].total_value 
+            });
+          }
+        }else{
+          wx.showModal({
+            title: '错误',
+            content: res.data.message.toString(),
+          })
+        }
+      },
+      fail: (err)=>{
+        wx.showModal({
+          title: '错误',
+          content: err,
+        })
+        console.log(err);
       }
     })
   },

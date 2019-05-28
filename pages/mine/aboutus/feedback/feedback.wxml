@@ -6,7 +6,7 @@
 </view>
 <view class="section">
   <form bindsubmit="bindFormSubmit">
-    <textarea placeholder="写点什么吧~" auto-focus="true" name="textarea" />
+    <textarea placeholder="写点什么吧~" auto-focus="true" name="textarea" bindinput='bindFaceback'/>
     <button form-type="submit" hover-class="hover-class">提交</button>
   </form>
 </view>

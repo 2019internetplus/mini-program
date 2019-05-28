@@ -3,6 +3,7 @@ Page({
 
   data: {
     buttons: [{ id: 1, name: '发现Bug' }, { id: 2, name: '吐槽一下' }],
+    message: ''
   },
 
   /**
@@ -26,6 +27,48 @@ Page({
     })
   },
 
+  bindFaceback:function(e){
+    this.setData({
+      message: e.detail.value
+    })
+  },
+  bindFormSubmit: function(){
+    const reqData = {
+      openid: wx.getStorageSync('openid'),
+      token: wx.getStorageSync('token'),
+      message: this.data.message
+    }
+
+    if(this.data.message === ""){
+      wx.showModal({
+        title: '提示',
+        content: '多少写点呀',
+      });
+    }else{
+      //上传数据
+      wx.request({
+        url: 'https://api.xumengli.cn/feedback/v0.1/add?token=' + reqData.token + '&openid=' + reqData.openid + '&message=' + reqData.message,
+        method: 'PUT',
+        dataType: 'STRING',
+        success: (res) =>{
+          // 返回『我的』页面
+          wx.reLaunch({
+            url: '/pages/mine/mine',
+          });
+          wx.showToast({
+            title: '提交成功',
+         });
+          
+        },
+        fail: (err) => {
+          wx.showModal({
+            title: '错误',
+            content: err,
+          })
+        }
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
