@@ -1,6 +1,10 @@
 var app = getApp();
 Page({
   data: {
+
+    //心情值
+    moodvalue: false,
+    value: "--",
     //这是轮播图图片
     imgUrls: [
       
@@ -83,6 +87,36 @@ Page({
           title: err,
           icon: 'none'
         });
+      }
+    });
+
+    //获取今日心情值
+
+    wx.request({
+      url: 'https://api.xumengli.cn/em/v0.1/getToday?token=' + wx.getStorageSync('token') + '&openid=' + wx.getStorageSync('openid'),
+      success: (res)=>{
+        if(res.data.code === 100){
+          if(res.data.data.length != 0){
+            $this.setData({
+              moodvalue: true
+            });
+            $this.setData({
+              value: res.data.data[0].total_value 
+            });
+          }
+        }else{
+          wx.showModal({
+            title: '错误',
+            content: res.data.message.toString(),
+          })
+        }
+      },
+      fail: (err)=>{
+        wx.showModal({
+          title: '错误',
+          content: err,
+        })
+        console.log(err);
       }
     })
   },

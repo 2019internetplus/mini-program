@@ -5,7 +5,8 @@ var common = require("../common.js")
 Page({
   data: { 
     userinfo:{
-      
+      nickName: wx.getStorageSync('nickName'),
+      avatarUrl: wx.getStorageSync('avatarUrl')
     },
     menuitems: [
       { text: '我的报告', url: 'myreport/myreport', icon: '../../images/mine/myreport.png' },

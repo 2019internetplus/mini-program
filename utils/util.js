@@ -1,3 +1,5 @@
+//import regeneratorRuntime from './regenerator-runtime/runtime.js'
+
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -101,3 +103,7 @@ module.exports = {
   getDateDiff: getDateDiff,
   buttonClicked: buttonClicked,
 }
+
+
+// login
+//const regeneratorRuntime = require('./regenerator-runtime/runtime');
