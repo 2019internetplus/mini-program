@@ -1,2 +1,22 @@
 <!--pages/myreport/myreport.wxml-->
+<view class="nav-tabs">
+  <view class="tab-list {{currentTab == idx ? 'active' : 'default' }}" wx:for="{{items}}" wx:key="prototype" wx:for-index="idx" wx:for-item="item" data-current="{{idx}}" bindtap="swichNav">
+    <text  wx:for-index="idx" data-current="{{idx}}" class="{{currentTab == idx ? 'tab-text1' : 'tab-text2' }}">{{item.text}}</text>
+  </view>
+</view>
+
+<view hidden="{{currentTab == 0? false: true}}">
+  <view class='list'>
+    <image src='/images/prev.png' class='image1' bindtap='preweek'></image>
+    <image src='/images/next.png' class='image2' bindtap='nextweek'></image>
+  </view>
+  <canvas canvas-id='canvas1' class='canvas'></canvas>
+  <week/>
+</view>
+<view hidden="{{currentTab == 1? false: true}}">
+  <canvas canvas-id='canvas2' class='canvas'></canvas>
+  <month/> 
+</view>
+
+
 

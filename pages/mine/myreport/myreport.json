@@ -1,28 +1,9 @@
 {
-  "pages": [
-    "week/week",
-    "month/month"
-  ],
-
-  "tabBar": {
-    "list": [
-      {
-        "text": "周",
-        "pagePath": "week/week"
-      },
-      {
-        "text": "月",
-        "pagePath": "month/month"
-      }
-    ],
-    "color": "#bfbfbf",
-    "selectedColor": "#515151",
-    "borderStyle": "white",
-    "backgroundColor": "#FFFFFF"
+ 
+  "usingComponents": {
+    "week": "week/week",
+    "month": "month/month"
   },
-
-
-  "usingComponents": {},
   "navigationBarTitleText": "我的报告"
 
 }

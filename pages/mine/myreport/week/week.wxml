@@ -1,0 +1,2 @@
+<!--pages/mine/myreport/week/week.wxml-->
+<canvas canvas-id='canvas1'></canvas>

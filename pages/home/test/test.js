@@ -1,5 +1,5 @@
 var postData = require("../../data/data.js");
-var progressNum = 0;//进度条
+//var progressNum = 0;//进度条
 
 /*
 function timing(that) {
@@ -123,8 +123,10 @@ Page({
       })
     }
 
-    progressNum = progressNum + 10;
-    this.setData({ per: progressNum })
+   
+    this.setData({ 
+      per: this.data.per+10, 
+      })
     if (tmp == 'A') {
       this.setData({
         A: this.data.A + 1
