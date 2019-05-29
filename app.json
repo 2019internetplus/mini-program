@@ -21,7 +21,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFdead",
+    "navigationBarBackgroundColor": "#ffdead",
     "navigationBarTitleText": "心柚",
     "navigationBarTextStyle": "black"
   },
@@ -42,14 +42,13 @@
       {
         "text": "我的",
         "pagePath": "pages/mine/mine",
-        "iconPath": "images/tabbar/mine-off.png",
-        "selectedIconPath": "images/tabbar/mine-on.png"
+        "iconPath": "images/tabbar/Mine-off.png",
+        "selectedIconPath": "images/tabbar/Mine-on.png"
       }
     ],
     "color": "#bfbfbf",
-    "selectedColor": "#515151",
-    "borderStyle": "white",
-    "backgroundColor": "#ffdead"
+    "selectedColor": "#ffdead",
+    "borderStyle": "white"
   },
   "sitemapLocation": "sitemap.json"
 }

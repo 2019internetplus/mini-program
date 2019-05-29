@@ -1,33 +1,35 @@
 <view class="warp">
   
   <view bindtap='select'>
-    <progress percent="{{per}}" show-info/>
+    <progress percent="{{per}}" border-radius="50rpx" color="#7cb5ec" stroke-width="8" active-mode="forwards"active/>
   </view>
   <view class='outer'>
-    <view class='describe'><text>{{index+1}}、{{choice[index].title}}</text></view>
+    <view class='describe'>
+    <text>{{index+1}}、{{choice[index].title}}</text>
+    </view>
     <view class='answer'>
 
       <radio-group bindchange='select' bindtap="playmusic">
         <view class="item">
-        <radio value='{{radios[0]}}' checked='{{clear}}'>
+        <radio value='{{radios[0]}}' checked='{{clear}}' color="#7cb5ec">
             <text decode='{{true}}' class='text'>&nbsp;{{choice[index].s_1}}</text>
         </radio> 
         </view>
 
         <view class="item">
-        <radio value='{{radios[1]}}' checked='{{clear}}'>
+        <radio value='{{radios[1]}}' checked='{{clear}}' color="#7cb5ec">
             <text decode='{{true}}' class='text'>&nbsp;{{choice[index].s_2}}</text>
         </radio> 
         </view>
 
         <view class="item">
-        <radio value='{{radios[2]}}' checked='{{clear}}'>
+        <radio value='{{radios[2]}}' checked='{{clear}}' color="#7cb5ec">
             <text decode='{{true}}' class='text'>&nbsp;{{choice[index].s_3}}</text>
         </radio>
         </view>
 
         <view class="item">
-        <radio value='{{radios[3]}}' checked='{{clear}}'>
+        <radio value='{{radios[3]}}' checked='{{clear}}' color="#7cb5ec">
             <text decode='{{true}}' class='text'>&nbsp;{{choice[index].s_4}}</text>
         </radio>
         </view>
