@@ -92,33 +92,69 @@ Page({
 
     //获取今日心情值
 
-    wx.request({
-      url: 'https://api.xumengli.cn/em/v0.1/getToday?token=' + wx.getStorageSync('token') + '&openid=' + wx.getStorageSync('openid'),
-      success: (res)=>{
-        if(res.data.code === 100){
-          if(res.data.data.length != 0){
-            $this.setData({
-              moodvalue: true
-            });
-            $this.setData({
-              value: res.data.data[0].total_value 
-            });
+    //需要登录，折中做法
+    var s = new Promise((resovle, reject) => {
+          // 用户登录
+          wx.login({
+            success: res => {
+              if (res.code) {
+                wx.request({
+                  url: 'https://api.xumengli.cn/user/v0.1/login',
+                  method: 'POST',
+                  data: {
+                    code: res.code
+                  },
+                  success: (data) => {
+                    wx.setStorage({
+                      key: "token",
+                      data: data.data.token
+                    });
+                    wx.setStorageSync('openid', data.data.openid);
+                    console.log(data.data.openid);
+                    resovle({
+                      msg: "login"
+                    });
+                  }
+                })
+              }
+            }
+          })
+      
+    });
+
+    s.then((value) => {
+      if(value.msg !== 'login') return;
+      wx.request({
+        url: 'https://api.xumengli.cn/em/v0.1/getToday?token=' + wx.getStorageSync('token') + '&openid=' + wx.getStorageSync('openid'),
+        success: (res) => {
+          if (res.data.code === 100) {
+            if (res.data.data.length != 0) {
+              $this.setData({
+                moodvalue: true
+              });
+              $this.setData({
+                value: res.data.data[0].total_value
+              });
+            }
+          } else {
+            wx.showModal({
+              title: '错误',
+              content: res.data.message.toString(),
+            })
           }
-        }else{
+        },
+        fail: (err) => {
           wx.showModal({
             title: '错误',
-            content: res.data.message.toString(),
+            content: err.errMsg,
           })
+          console.log(err);
         }
-      },
-      fail: (err)=>{
-        wx.showModal({
-          title: '错误',
-          content: err,
-        })
-        console.log(err);
-      }
+      })
+    }).catch(e => {
+      console.log(e);
     })
+    
   },
   onReady: function() {
     

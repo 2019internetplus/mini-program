@@ -5,15 +5,15 @@
 	},
 	"setting": {
 		"urlCheck": false,
-		"es6": true,
+		"es6": false,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
-		"nodeModules": true
+		"nodeModules": false,
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.5",
+	"libVersion": "2.7.0",
 	"appid": "wx70e86d52a0bb3ff1",
 	"projectname": "miniprogram-test-1",
 	"debugOptions": {

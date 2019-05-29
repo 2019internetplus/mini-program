@@ -13,70 +13,9 @@ App({
     }
 
 
-    /* begin debug */
-    // 用户登录
     
-      wx.login({
-        success: res => {
-          if (res.code) {
-            wx.request({
-              url: 'https://api.xumengli.cn/user/v0.1/login',
-              method: 'POST',
-              data: {
-                code: res.code
-              },
-              success: (data) => {
-                wx.setStorage({
-                  key: "token",
-                  data: data.data.token //存储token
-                });
-                //resovle(data);
-                // 存储openid
-                wx.setStorageSync('openid', data.data.openid)
-                console.log(data.data.openid);
 
-              }
-            })
-          }
-        }
-      })
     
-    
-    
-    /* end debug */
-
-
-    wx.checkSession({
-      success() {
-
-      },
-      fail: () => {
-
-        // 用户登录
-        wx.login({
-          success: res => {
-            if (res.code) {
-              wx.request({
-                url: 'https://api.xumengli.cn/user/v0.1/login',
-                method: 'POST',
-                data: {
-                  code: res.code
-                },
-                success: (data) => {
-                  wx.setStorage({
-                    key: "token",
-                    data: data.data.token
-                  });
-                  wx.setStorageSync('openid', data.data.openid);
-                  console.log(data.data.openid);
-                }
-              })
-            }
-          }
-        })
-
-      }
-    })
     
 
     

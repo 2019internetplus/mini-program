@@ -1,5 +1,5 @@
 var _app = getApp()
-var common = require("../common.js")
+
 
 
 Page({
@@ -16,10 +16,18 @@ Page({
     ]
   },
 
-  toLogin: function () {
-    common.onLogin();
-    common.getUserInfo();
-    common.userInfoSetInSQL(userInfo);
+  bindGetUserInfo: function(e){
+    if(e.detail.userInfo){
+      wx.setStorageSync('nickName', e.detail.userInfo.nickName);
+      wx.setStorageSync('avatarUrl', e.detail.userInfo.avatarUrl);
+    }else{
+      wx.showModal({
+        title: '警告',
+        content: '你拒绝授权，一些功能将无法使用',
+        showCancel: false,
+        confirmText: '返回授权',
+      });
+    }
   },
   onLoad: function (options) { 
   }
