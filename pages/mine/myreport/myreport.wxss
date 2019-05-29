@@ -12,6 +12,7 @@ page {
   top: 0;
 }
 
+
 .tab-list {
   display: flex;
   align-items: center;
@@ -66,12 +67,20 @@ page {
   display: none;
   flex: 1;
 }
-.canvas{
+.canvas1 {
   margin: 10rpx auto;
-  height: 600rpx;
-  width: 600rpx
+  width: 600rpx;
+  height: 400rpx;
+  
 }
-.list{
+
+.canvas2 {
+  margin: 10rpx auto;
+  width: 600rpx;
+  height: 300rpx;
+  
+}
+.list {
   display: flex;
   flex-direction: row;
   margin:20rpx auto;
@@ -79,11 +88,14 @@ page {
   justify-content: space-around
 
 }
-.image1{
+.image1 {
   height: 32rpx;
   width: 32rpx
 }
-.image2{
+.image2 { 
   height:32rpx;
   width:32rpx;
+}
+.text {
+  font-size: 25rpx;
 }

@@ -20,6 +20,7 @@ Page({
 
     week: [],
     date: 0,
+    month: 0,
   },
   swichNav: function (e) {
     let that = this;
@@ -58,13 +59,14 @@ Page({
 
   },
 
-  preweek: function() {
+  preweek: function() {   //
     var d = this.data.date;
     this.setData({
       date: d - 7,
     })
     this.getweek(d - 7);
-    this.showColumn();
+    this.showColumn1();
+    this.showRadar1();
   },
 
   nextweek: function() {
@@ -73,10 +75,23 @@ Page({
       date: d + 7,
     })
     this.getweek(d + 7);
-    this.showColumn();
+    this.showColumn1();
+    this.showRadar1();
   },
 
-  showColumn: function() {
+  premonth: function() {
+    this.setData({
+      month: this.data.month - 1,
+    })
+  },
+
+  nextmonth: function() {
+    this.setData({
+      month: this.data.month + 1,
+    })
+  },
+
+  showColumn1: function() {
     new Charts({
       animation: true,
       canvasId: 'canvas1',
@@ -107,24 +122,16 @@ Page({
       }
     });
   },
-  
-  onLoad: function () {
-    var d = new Date().getDate();
-    this.setData({
-      date: d,
-    })
-    this.getweek(d);
 
-    this.showColumn();
-
+  showColumn2: function(){
     new Charts({
       animation: true,
-      canvasId: 'canvas2',
+      canvasId: 'canvas3',
       dataPointShape: false,
       type: 'column',
-      categories: ['第一周','第二周','第三周','第四周'],
+      categories: ['第一周', '第二周', '第三周', '第四周'],
       series: [{
-        data: [ 37, 40, 90, 66],
+        data: [37, 40, 90, 66],
         color: '#FFdead',
       }],
 
@@ -145,9 +152,73 @@ Page({
 
         }
       }
-});
+    });
 
+  },
 
+  showRadar1: function() {
+    new Charts({
+      animation: true,
+      canvasId: 'canvas2',
+      type: 'radar',
+      dataPointShape: false,
+      categories: ['自我肯定', '焦虑', '忧郁'],
+      series: [{
+        data: [78, 88, 98],
+        color: '#FFdead'
+      }],
+      width: 350,
+      height: 200,
+      extra: {
+        radar: {
+          max: 100//雷达数值的最大值
+        }
+      },
+      legend: false,
+      disablePieStroke: true,
+      padding: 0
+    });
+  },
+
+  showRadar2: function() {
+    new Charts({
+      animation: true,
+      canvasId: 'canvas4',
+      type: 'radar',
+      dataPointShape: flase,
+      categories: ['自我肯定', '焦虑', '忧郁'],
+      series: [{
+        data: [78, 88, 98],
+        color: '#FFdead'
+      }],
+      width: 350,
+      height: 200,
+      extra: {
+        radar: {
+          max: 100//雷达数值的最大值
+        }
+      },
+      legend: false,
+      disablePieStroke: true,
+      padding: 0
+    });
+  },
+  
+  onLoad: function () {
+    var d = new Date();
+    var tmp1 = d.getDate();
+    console.log(tmp1);
+    var tmp2 = d.getMonth() + 1;
+    this.setData({
+      date: tmp1,
+      month: tmp2
+    })
+    this.getweek(tmp1);
+
+    this.showColumn1();
+    this.showRadar1();
+    this.showColumn2();
+    this.showRadar2();
     /*let that = this
     app.getUserInfo(function (userInfo) {
       that.setData({

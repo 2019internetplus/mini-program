@@ -5,16 +5,23 @@
   </view>
 </view>
 
-<view hidden="{{currentTab == 0? false: true}}">
+<view hidden="{{currentTab == 0? false: true}}" class='container'>
   <view class='list'>
     <image src='/images/prev.png' class='image1' bindtap='preweek'></image>
     <image src='/images/next.png' class='image2' bindtap='nextweek'></image>
   </view>
-  <canvas canvas-id='canvas1' class='canvas'></canvas>
+  <canvas canvas-id='canvas1' class='canvas1'></canvas>
+  <canvas canvas-id='canvas2' class='canvas2'></canvas>
   <week/>
 </view>
 <view hidden="{{currentTab == 1? false: true}}">
-  <canvas canvas-id='canvas2' class='canvas'></canvas>
+  <view class='list'>
+    <image src='/images/prev.png' class='image1' bindtap='premonth'></image>
+    <text class='text'>{{month}}月</text>
+    <image src='/images/next.png' class='image2' bindtap='nextmonth'></image>
+  </view>
+  <canvas canvas-id='canvas3' class='canvas1'></canvas>
+  <canvas canvas-id='canvas4' class='canvas2'></canvas>
   <month/> 
 </view>
 
