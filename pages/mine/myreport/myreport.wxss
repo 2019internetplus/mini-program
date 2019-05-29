@@ -1,1 +1,101 @@
 /* pages/myreport/myreport.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.nav-tabs {
+  width: 100%;
+  display: flex;
+  /*position: fixed;*/
+  top: 0;
+}
+
+
+.tab-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  /*background: #fcfcfc;*/
+}
+
+.tab-text1 {
+  width: 50%;
+  font-size: 30rpx;
+  line-height: 35rpx;
+  padding: 30rpx 50rpx;
+  border-bottom: 5rpx solid #adabab;
+}
+
+.tab-text2 {
+  width: 50%;
+  font-size: 28rpx;
+  line-height: 35rpx;
+  padding: 30rpx 50rpx;
+ 
+}
+
+.iconPath {
+  width:54rpx;
+  height: 54rpx;
+}
+
+.tab-content {
+  flex: 1;
+}
+
+.default {
+  line-height: 75rpx;
+  text-align: center;
+  flex: 1;
+}
+.active {
+  line-height: 75rpx;
+  text-align: center;
+  
+  flex: 1;
+}
+
+.show {
+  display: block;
+  flex: 1;
+}
+
+.hidden {
+  display: none;
+  flex: 1;
+}
+.canvas1 {
+  margin: 10rpx auto;
+  width: 600rpx;
+  height: 400rpx;
+  
+}
+
+.canvas2 {
+  margin: 10rpx auto;
+  width: 600rpx;
+  height: 300rpx;
+  
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  margin:20rpx auto;
+  height:50rpx;
+  justify-content: space-around
+
+}
+.image1 {
+  height: 32rpx;
+  width: 32rpx
+}
+.image2 { 
+  height:32rpx;
+  width:32rpx;
+}
+.text {
+  font-size: 25rpx;
+}

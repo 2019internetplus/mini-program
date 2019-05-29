@@ -9,8 +9,6 @@
     "pages/calendar/calendar",
     "pages/mine/mine",
     "pages/start/start",
-    "pages/mine/myreport/week/week",
-    "pages/mine/myreport/month/month",
     "pages/mine/more/more",
     "pages/mine/myreport/myreport",
     "pages/mine/mynotice/mynotice",
@@ -21,7 +19,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFdead",
+    "navigationBarBackgroundColor": "#ffdead",
     "navigationBarTitleText": "心柚",
     "navigationBarTextStyle": "black"
   },
@@ -47,9 +45,8 @@
       }
     ],
     "color": "#bfbfbf",
-    "selectedColor": "#515151",
-    "borderStyle": "white",
-    "backgroundColor": "#ffdead"
+    "selectedColor": "#ffdead",
+    "borderStyle": "white"
   },
   "sitemapLocation": "sitemap.json"
 }

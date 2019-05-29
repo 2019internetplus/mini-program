@@ -1,52 +1,5 @@
 var postData = require("../../data/data.js");
-var progressNum = 0;//进度条
 
-/*
-function timing(that) {
-  var seconds = that.data.seconds
-  if (seconds > 21599) {
-    that.setData({
-      time: '6小时，不想继续了gg'
-    });
-    return;
-  }
-  setTimeout(function () {
-    that.setData({
-      seconds: seconds + 1
-    });
-    timing(that);
-  }
-    , 1000)
-  formatSeconds(that)
-}
-
-
-function formatSeconds(that) {
-  var mins = 0, hours = 0, seconds = that.data.seconds, time = ''
-  if (seconds < 60) {
-
-  } else if (seconds < 3600) {
-    mins = parseInt(seconds / 60)
-    seconds = seconds % 60
-  } else {
-    mins = parseInt(seconds / 60)
-    seconds = seconds % 60
-    hours = parseInt(mins / 60)
-    mins = mins % 60
-  }
-  that.setData({
-    time: formatTime(hours) + ':' + formatTime(mins) + ':' + formatTime(seconds)
-  });
-}
-
-
-function formatTime(num) {
-  if (num < 10)
-    return '0' + num
-  else
-    return num + ''
-}*/
-// pages/question/question.js
 Page({
 
   /**
@@ -123,8 +76,10 @@ Page({
       })
     }
 
-    progressNum = progressNum + 10;
-    this.setData({ per: progressNum })
+   
+    this.setData({ 
+      per: this.data.per+10, 
+      })
     if (tmp == 'A') {
       this.setData({
         A: this.data.A + 1
@@ -198,7 +153,7 @@ Page({
        });
         console.log(that.data.choice);
       },
-      fail:function(res) {
+      fail: function(res) {
         console.log(error)
       }
 

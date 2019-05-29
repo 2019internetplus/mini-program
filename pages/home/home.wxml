@@ -28,7 +28,7 @@
   </view>
 
   <view class="banner">
-    <swiper class="swiper_box" indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:{{Hei}}'>
+    <swiper class="swiper_box" indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:610rpx'>
       <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
         <swiper-item>
           <image src="{{item}}"  mode="widthFix" bindload='imgH'/>

@@ -8,6 +8,8 @@ Page({
    */
   data: {
     date:'',
+    score: 0,
+    type: []
   },
 
   /**
@@ -26,6 +28,8 @@ Page({
     var date = Y+"年"+M+"月"+D+"日";
     this.setData({
       date: date,
+      score: options.result,
+      type: [options.type_0, options.type_1, options.type_2],
     }); 
 
     new Charts({
@@ -39,17 +43,17 @@ Page({
         }
       },
       title: {
-        name: '90',
+        name: this.data.score,
         color: '#7cb5ec',
         fontSize: 35
       },
       
       series: [{
-        data: 90,
+        data: this.data.score,
         stroke: false,
         color: '#7cb5ec'
       }, {
-        data: 10,
+        data: 100- this.data.score,
         stroke: false,
         color: '#bfbfbf',
       }, ],
@@ -67,8 +71,8 @@ Page({
       type: 'radar',
       categories: ['自我肯定','焦虑','忧郁'],
       series: [{
-        
-        data: [78,88,98]
+        color: '#FFdead',
+        data: this.data.type
       }],
       width: 400,
       height: 200,
