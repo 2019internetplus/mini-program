@@ -9,8 +9,6 @@
     "pages/calendar/calendar",
     "pages/mine/mine",
     "pages/start/start",
-    "pages/mine/myreport/week/week",
-    "pages/mine/myreport/month/month",
     "pages/mine/more/more",
     "pages/mine/myreport/myreport",
     "pages/mine/mynotice/mynotice",
