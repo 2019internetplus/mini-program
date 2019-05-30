@@ -5,7 +5,7 @@
     </view>
     <view class="text">
       <text wx:if="{{userinfo.nickName}}">{{userinfo.nickName}}</text>
-      <button wx:else bindtap="toLogin" class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">登录</button>
+      <button wx:else class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">登录</button>
     </view>
     <view class="more">
       <navigator url="more/more" wx:if="{{userSign==1}}">更多</navigator>

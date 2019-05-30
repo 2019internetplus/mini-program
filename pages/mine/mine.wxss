@@ -38,3 +38,8 @@
 .list text {
   color: #555555;
 }
+
+.bottom{
+  margin-left: 60px;
+  margin-right: 60px; 
+}

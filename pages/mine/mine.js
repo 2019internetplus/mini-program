@@ -18,6 +18,7 @@ Page({
 
   bindGetUserInfo: function(e){
     if(e.detail.userInfo){
+      console.log(e);
       wx.setStorageSync('nickName', e.detail.userInfo.nickName);
       wx.setStorageSync('avatarUrl', e.detail.userInfo.avatarUrl);
     }else{

@@ -1,6 +1,8 @@
 <view class="container">
-  <view class="item" hover-class='item-hover'>
-    <view class="header">上周05/20 ~ 05/26 共有7天记录你的情绪值，这是你的情绪周报。</view>
+  <block wx:for="{{noticeList}}" wx:key="_id">
+  <view class="item" >
+    <view class="header">上周{{item.from_value}} ~ {{item.to_value}} 共有{{item.count}}天记录你的情绪值，这是你的情绪周报。</view>
     <image class="post" src='../../../images/heart.png'/>
   </view>
+  </block>
 </view>
