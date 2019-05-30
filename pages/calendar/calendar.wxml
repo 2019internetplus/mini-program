@@ -30,10 +30,10 @@
     </view>
     <view class="record_text">心情记录</view>
     <scroll-view scroll-y="true">
-      <view class="message">
+      <view class="message" wx:if="{{selectedValue.value}}">
+        <text>心情值:{{selectedValue.value}} </text>
         <text>
-        {{item.record}}今天天气好晴朗，处处好风光
-        夏天夏天悄悄过去，留下小秘密
+        日记:{{selectedValue.message}}
         </text>
       </view>
     </scroll-view>

@@ -1,12 +1,17 @@
 
-// pages/myassessment/myassessment.js
 Page({
   data: {
-    data: {}
+    data: {},
+    dayValues:[],
+    selectedValue: {
+      value: null,
+      message: ''
+    }
   },
 
   onLoad: function (options) {
     let _this = this;
+    getSelectedValue(this);
     changeDate.call(this);
   },
 
@@ -29,8 +34,28 @@ Page({
     data['selected']['month'] = month;
     data['selected']['date'] = date;
 
+    //选择数据
+    for(let i = 0; i < this.data.dayValues.length; i++){
+      let time = new Date(this.data.dayValues[i].time * 1000);
+      if(time.getFullYear() === year && time.getMonth() + 1 === month && time.getDate() === date ){
+        this.setData({
+          selectedValue: {
+            value: this.data.dayValues[i].total_value,
+            message: this.data.dayValues[i].message
+          } 
+        });
+        break;
+      }
+      this.setData({
+        selectedValue: {
+          value: null,
+          message: ""
+        }
+      });
+      console.log(this.data.selectedValue);
+    }
     this.setData({ data: data });
-
+    console.log(changeDate);
     changeDate.call(this, new Date(year, parseInt(month) - 1, date));
   },
 })
@@ -147,4 +172,35 @@ function changeDate(targetDate) {
 function formatNumber(n) {
   n = n.toString()
   return n[1] ? n : '0' + n
+}
+
+
+function getSelectedValue($this){
+   const reqData = {
+     openid: wx.getStorageSync('openid'),
+     token: wx.getStorageSync('token')
+   };
+   wx.request({
+     url: 'https://api.xumengli.cn/em/v0.1/getAll?openid=' + reqData.openid + '&token=' + reqData.token,
+     method: 'GET',
+     success: (res) =>{
+       if(res.data.code == 100){
+         $this.setData({
+           dayValues: res.data.data
+         });
+       }else{
+         wx.showModal({
+           title: '错误',
+           content: res.data.message,
+         })
+       }
+     },
+     fail: (err) =>{
+       wx.showModal({
+         title: '错误',
+         content: err.errMsg,
+       })
+       console.log(err);
+     }
+   })
 }
