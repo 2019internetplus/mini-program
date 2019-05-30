@@ -1,6 +1,8 @@
 .container {
   height: 100%;
-  width: 100%
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .innercontainer {
@@ -30,8 +32,6 @@
   flex-direction: row;
   
 }
-
-
 .score {
   display: flex;
   flex-direction: column;
@@ -45,14 +45,28 @@
 .detail {
   display: flex;
   flex-direction: column;
-  padding: 100rpx 0rpx 50rpx 50rpx;
+  padding: 130rpx 0rpx 50rpx 50rpx;
  
 }
-.dot {
+.dot1 {
   height: 20rpx;
   width: 20rpx;
   border-radius: 50%;
-  background-color: #7cb5ec;
+  background-color: #ffaf46;
+  margin: auto;
+}
+.dot2 {
+  height: 20rpx;
+  width: 20rpx;
+  border-radius: 50%;
+  background-color: #61a7ff;
+  margin: auto;
+}
+.dot3 {
+  height: 20rpx;
+  width: 20rpx;
+  border-radius: 50%;
+  background-color: #fa2500;
   margin: auto;
 }
 .textcontainer {
@@ -62,8 +76,12 @@
   height: 50rpx;
   
 }
-.text1{
+.text1 {
   font-size: 30rpx;
   margin: auto 20rpx;
- 
+}
+.textRadar {
+  font-size: 25rpx;
+  margin: 20rpx auto;
+  color: #525f61
 }

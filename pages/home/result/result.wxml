@@ -8,32 +8,22 @@
       </view>
       <view class='detail'>
         <view class='textcontainer'>
-          <view class='dot'></view>
-          <text class='text1'>fgdfdfs</text>
+          <view class='dot1'></view>
+          <text class='text1'>积极情绪</text>
         </view>
         <view class='textcontainer'>
-          <view class='dot'></view>
-          <text class='text1'>fgdfdfs</text>
+          <view class='dot2'></view>
+          <text class='text1'>一般情绪</text>
         </view>
         <view class='textcontainer'>
-          <view class='dot'></view>
-          <text class='text1'>fgdfdfs</text>
-        </view>
-        <view class='textcontainer'>
-          <view class='dot'></view>
-          <text class='text1'>fgdfdfs</text>
-        </view>
-        <view class='textcontainer'>
-          <view class='dot'></view>
-          <text class='text1'>fgdfdfs</text>
+          <view class='dot3'></view>
+          <text class='text1'>消极情绪</text>
         </view>
       </view>
     </view>
   </view>
-
- 
-    <text class='text'>三维情绪雷达图：</text>
+    
     <canvas canvas-id='canvas2'></canvas>
- 
+    <text class='textRadar'>三维情绪雷达图</text>
 
 </view>
