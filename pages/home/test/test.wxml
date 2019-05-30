@@ -9,7 +9,7 @@
     </view>
     <view class='answer'>
 
-      <radio-group bindchange='select' bindtap="playmusic">
+      <radio-group bindchange='select'>
         <view class="item">
         <radio value='{{radios[0]}}' checked='{{clear}}' color="#7cb5ec">
             <text decode='{{true}}' class='text'>&nbsp;{{choice[index].s_1}}</text>

@@ -12,6 +12,73 @@ Page({
     type: []
   },
 
+  showRing: function() {
+    var color = '';
+    var tmp = this.data.score;
+    if(tmp < 60)
+      color = '#fa2500';
+    else if(tmp >= 50&& tmp < 85)
+      color = '#61a7ff';
+    else if(tmp >= 85)
+      color = '#ffaf46'
+
+    new Charts({
+      animation: true,
+      canvasId: 'canvas1',
+      type: 'ring',
+      extra: {
+        ringWidth: 10,//圆环的宽度
+        pie: {
+          offsetAngle: -90//圆环的角度
+        }
+      },
+      title: {
+        name: this.data.score,
+        color: color,
+        fontSize: 35
+      },
+
+      series: [{
+        data: this.data.score,
+        color: color
+      }, {
+        data: 100 - this.data.score,
+          color: '#e6e7e2',
+      },],
+      disablePieStroke: true,
+      width: 200,
+      height: 150,
+      dataLabel: false,
+      legend: false,
+      padding: 0
+    });
+  },
+
+  showRadar: function() {
+    new Charts({
+      animation: true,
+      canvasId: 'canvas2',
+      type: 'radar',
+      categories: ['自我肯定', '抗焦虑', '抗忧郁'],
+      series: [{
+        color: '#ffaf46',
+        data: this.data.type
+      }],
+      width: 300,
+      height: 200,
+      extra: {
+        radar: {
+          max: 100//雷达数值的最大值
+        }
+      },
+      legend: false,
+      disablePieStroke: true,
+      padding: 0,
+      dataPointShape: false,
+    });
+
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,121 +93,28 @@ Page({
     var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
 
     var date = Y+"年"+M+"月"+D+"日";
+
+    console.log(options.result);
+    console.log(options.type_0);
+    console.log(options.type_1);
+    console.log(options.type_2);
+    const commit =  wx.getStorageSync('commit_time') == new Date().getDate() ? 1 : 0;
+    wx.setStorageSync('commit_time', new Date().getDate());
+
     this.setData({
       date: date,
-      score: options.result,
+      score: parseInt(options.result),   //将result转换成number类型
       type: [options.type_0, options.type_1, options.type_2],
     }); 
 
-    new Charts({
-      animation: true,
-      canvasId: 'canvas1',
-      type: 'ring',
-      extra: {
-        ringWidth: 10,//圆环的宽度
-        pie: {
-          offsetAngle: -90//圆环的角度
-        }
-      },
-      title: {
-        name: this.data.score,
-        color: '#7cb5ec',
-        fontSize: 35
-      },
-      
-      series: [{
-        data: this.data.score,
-        stroke: false,
-        color: '#7cb5ec'
-      }, {
-        data: 100- this.data.score,
-        stroke: false,
-        color: '#bfbfbf',
-      }, ],
-      disablePieStroke: true,
-      width: 200,
-      height: 150,
-      dataLabel: false,
-      legend: false,
-      padding: 0
-    });
-
-    new Charts({
-      animation: true,
-      canvasId: 'canvas2',
-      type: 'radar',
-      categories: ['自我肯定','焦虑','忧郁'],
-      series: [{
-        color: '#FFdead',
-        data: this.data.type
-      }],
-      width: 400,
-      height: 200,
-      extra: {
-        radar: {
-          max: 100//雷达数值的最大值
-        }
-      },
-      legend: false,
-      disablePieStroke: true,
-      padding: 0
-    });
+    console.log(this.data.score);
+    console.log(typeof (options.result))
+    
+    this.showRing();
+    this.showRadar();
+    
 
   },
 
  
-
-  /*
-  wx:navigateBack({
-    url: 'pages/home/home',
-  }),*/
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
-  }
 })
