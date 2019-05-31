@@ -1,1 +1,17 @@
 /* pages/usehelp/usehelp.wxss */
+
+.container{
+  height: auto;
+  width: auto;
+  margin: 10px;
+}
+
+text{
+  height: auto;
+  width: auto;
+}
+
+image{
+  height: 450px;
+  margin: 10px auto;
+}

@@ -70,7 +70,35 @@
   text-align: center;
   height: 80rpx;
 }
-.message{
-  word-wrap: break-word; 
+
+.em_message{
   text-align: center;
+}
+
+.score1{
+  background-color: #d42a4a;
+}
+
+.score2{
+  background-color: #ffca00;
+  
+}
+
+.score3{
+  background-color: #136fff;
+}
+
+.score-box{
+  height: 100px;
+  margin: 10px 30px;
+  border-radius: 15px;
+  line-height: 100px;
+  font-size: 30px; 
+  color: white;
+  text-align: center;
+}
+.em_message{
+  height: auto;
+  opacity: 0.5;
+  margin: 10px 5px;
 }

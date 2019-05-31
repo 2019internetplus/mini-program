@@ -99,7 +99,7 @@ Page({
       type: 'column',
       categories: this.data.week,
       series: [{
-        data: [-1, 20, 45, 37, 4, 90, 66],
+        data: [10, 20, 45, 37, 4, 90, 66],
         color: '#FFdead',
       }],
 

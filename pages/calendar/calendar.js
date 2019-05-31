@@ -41,7 +41,7 @@ Page({
         this.setData({
           selectedValue: {
             value: this.data.dayValues[i].total_value,
-            message: this.data.dayValues[i].message
+            message: this.data.dayValues[i].message || "",
           } 
         });
         break;

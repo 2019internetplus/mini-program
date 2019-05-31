@@ -61,7 +61,7 @@ Page({
       type: 'radar',
       categories: ['自我肯定', '抗焦虑', '抗忧郁'],
       series: [{
-        color: '#61a7ff',
+        color: '#ffaf46',
         data: this.data.type
       }],
       width: 300,
@@ -116,5 +116,13 @@ Page({
 
   },
 
- 
+  onUnload: function(){
+    this.gotoHomePage();
+  },
+
+  gotoHomePage: function(){
+    wx.reLaunch({
+      url: '/pages/home/home',
+    });
+  }
 })

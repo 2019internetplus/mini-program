@@ -18,8 +18,12 @@ Page({
 
   bindGetUserInfo: function(e){
     if(e.detail.userInfo){
+      console.log(e);
       wx.setStorageSync('nickName', e.detail.userInfo.nickName);
       wx.setStorageSync('avatarUrl', e.detail.userInfo.avatarUrl);
+      wx.reLaunch({
+        url: '/page/mine/mine',
+      })
     }else{
       wx.showModal({
         title: '警告',

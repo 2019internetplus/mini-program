@@ -3,9 +3,11 @@
     <view class="avatar">
       <image style="border-radius:50%;" src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'/images/mine/userimage.png'}}"></image>
     </view>
-    <view class="text">
+    <view class="text" style='margin-top:20rpx'>
       <text wx:if="{{userinfo.nickName}}">{{userinfo.nickName}}</text>
-      <button wx:else class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">登录</button>
+
+      <button wx:else  class='bottom' size='mini' plain='true'  open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">登录</button>
+
     </view>
     <view class="more">
       <navigator url="more/more" wx:if="{{userSign==1}}">更多</navigator>
