@@ -1,2 +1,39 @@
 <!--pages/usehelp/usehelp.wxml-->
-<text>pages/usehelp/usehelp.wxml</text>
+
+
+<view class='container'>
+  <text>
+  1. 进入便是主页面，主页面部便是心情值，和日历。下面两个按钮分别是记录心情值和测试。下面几幅图是当日推送的精美图片。
+  </text>
+  <image src='/images/help/help1.png'/>
+  <text>
+  2. 记录页面可以记录当天的心情值和写出一段话。
+  </text>
+  <image src="/images/help/help_record.png"/> 
+
+  <text>
+  3. 测试页面有十道随机选出来的题，这些题包含三个模块，三个模块的题可以测试你的情绪值。
+  </text>
+  <image src="/images/help/help_test.png"/>
+
+  <text>
+  3. 测试页面有十道随机选出来的题，这些题包含三个模块，三个模块的题可以测试你的情绪值。
+  </text>
+  <image src="/images/help/help_test.png"/>
+  <image src="/images/help/help_test_result.png"/>
+
+   <text>
+  4. 日历页面记录着每一天的心情值，你可以点击，即可查看具体日期的心情值和写的话。
+  </text>
+  <image src="/images/help/help_calendar.png"/>
+
+   <text>
+  5. 我的页面包含我的周报，我的消息，使用帮助和关于我们。该页面可以登录获取用户信息。
+  </text>
+  <image src="/images/help/help_mine.png"/>
+
+   <text>
+  6. 我的消息是每次周报消息。每次推送的周报消息都会显示在这儿。
+  </text>
+  <image src="/images/help/help_messages.png"/>
+</view>

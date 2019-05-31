@@ -28,16 +28,20 @@
         </view> 
       </block>
     </view>
-    <view class="record_text">心情记录</view>
-    <scroll-view scroll-y="true">
-      <view class="message" wx:if="{{selectedValue.value}}">
-        <view wx:if="{{selectedValue.value <= 34}}" class="score1 score-box em-value"><text class='em-value'>{{selectedValue.value}}</text> </view>
-       <view wx:elif="{{selectedValue.value <= 67}}" class="score2 score-box em_value">
-        <text class='em_value'>{{selectedValue.value}}</text>
+    
+  </view>
+
+  <view class="record_text">心情记录</view>
+  <view wx:if="{{selectedValue.value}}">
+        <view wx:if="{{selectedValue.value <= 60}}" class="score1 score-box"><text >{{selectedValue.value}}</text> </view>
+       <view wx:elif="{{selectedValue.value <= 85}}" class="score2 score-box">
+        <text >{{selectedValue.value}}</text>
        </view> 
        <view wx:else class='score3 score-box' >
-         <text class='em_value'>{{selectedValue.value}}</text>
+         <text >{{selectedValue.value}}</text>
        </view>
       </view>
-    </scroll-view>
-  </view>
+
+       <view class="em_message" wx:if="{{selectedValue.message != ''}}">
+        {{selectedValue.message}}
+       </view>

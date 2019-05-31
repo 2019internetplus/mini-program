@@ -116,5 +116,13 @@ Page({
 
   },
 
- 
+  onUnload: function(){
+    this.gotoHomePage();
+  },
+
+  gotoHomePage: function(){
+    wx.reLaunch({
+      url: '/pages/home/home',
+    });
+  }
 })

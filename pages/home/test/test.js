@@ -88,7 +88,7 @@ Page({
     const openid = wx.getStorageSync('openid');
 
     wx.request({
-      url: ' https://api.xumengli.cn/em/v0.1/addTestValue?token=' +  token +'&commit='+ commit +'&openid='+ openid +'&test_value='+ s1 +'&self_affirm='+ s2*0.4 +'&anti_anxiety='+ s3*0.3 +'&anti_melancholy='+ s4*0.3,
+      url: 'https://api.xumengli.cn/em/v0.1/addTestValue?token=' +  token +'&commit='+ commit +'&openid='+ openid +'&test_value='+ s1 +'&self_affirm='+ s2*0.4 +'&anti_anxiety='+ s3*0.3 +'&anti_melancholy='+ s4*0.3,
       method: 'PUT',
       dataType: 'STRING',
      
