@@ -16,11 +16,11 @@ Page({
     var color = '';
     var tmp = this.data.score;
     if(tmp < 60)
-      color = '#fa2500';
+      color = '#fa2500';   //红
     else if(tmp >= 50&& tmp < 85)
-      color = '#61a7ff';
+      color = '#61a7ff';   //蓝
     else if(tmp >= 85)
-      color = '#ffaf46'
+      color = '#ffaf46'     //黄
 
     new Charts({
       animation: true,
@@ -61,7 +61,7 @@ Page({
       type: 'radar',
       categories: ['自我肯定', '抗焦虑', '抗忧郁'],
       series: [{
-        color: '#ffaf46',
+        color: '#61a7ff',
         data: this.data.type
       }],
       width: 300,

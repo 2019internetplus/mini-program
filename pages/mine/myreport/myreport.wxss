@@ -26,7 +26,7 @@ page {
   font-size: 30rpx;
   line-height: 35rpx;
   padding: 30rpx 50rpx;
-  border-bottom: 5rpx solid #adabab;
+  /*border-bottom: 5rpx solid #adabab;*/
 }
 
 .tab-text2 {
@@ -34,7 +34,7 @@ page {
   font-size: 28rpx;
   line-height: 35rpx;
   padding: 30rpx 50rpx;
- 
+  
 }
 
 .iconPath {
@@ -49,13 +49,16 @@ page {
 .default {
   line-height: 75rpx;
   text-align: center;
+  color: #adabab;
   flex: 1;
+  
 }
 .active {
   line-height: 75rpx;
-  text-align: center;
-  
+  text-align: center; 
+  color: #FFdead;
   flex: 1;
+
 }
 
 .show {
@@ -69,14 +72,14 @@ page {
 }
 .canvas1 {
   margin: 10rpx auto;
-  width: 600rpx;
+  width: 650rpx;
   height: 400rpx;
   
 }
 
 .canvas2 {
   margin: 10rpx auto;
-  width: 600rpx;
+  width: 650rpx;
   height: 300rpx;
   
 }
@@ -98,4 +101,5 @@ page {
 }
 .text {
   font-size: 25rpx;
+
 }

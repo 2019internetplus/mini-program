@@ -99,7 +99,7 @@ Page({
       type: 'column',
       categories: this.data.week,
       series: [{
-        data: [15, 20, 45, 37, 4, 90, 66],
+        data: [-1, 20, 45, 37, 4, 90, 66],
         color: '#FFdead',
       }],
 
@@ -162,7 +162,7 @@ Page({
       canvasId: 'canvas2',
       type: 'radar',
       dataPointShape: false,
-      categories: ['自我肯定', '焦虑', '忧郁'],
+      categories: ['自我肯定', '抗焦虑', '抗忧郁'],
       series: [{
         data: [78, 88, 98],
         color: '#FFdead'
@@ -185,8 +185,8 @@ Page({
       animation: true,
       canvasId: 'canvas4',
       type: 'radar',
-      dataPointShape: flase,
-      categories: ['自我肯定', '焦虑', '忧郁'],
+      dataPointShape: false,
+      categories: ['自我肯定', '抗焦虑', '抗忧郁'],
       series: [{
         data: [78, 88, 98],
         color: '#FFdead'
